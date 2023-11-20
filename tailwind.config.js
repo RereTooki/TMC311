@@ -12,7 +12,8 @@ export default {
       'nsm': '600px',      
       md: '450px',
       lg: '670px',
-      xl: '1423px',
+      'nxl': '800px',
+      xl: '1110px',
     },
 
     extend: {

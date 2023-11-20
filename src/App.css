@@ -13,3 +13,65 @@
 body{
    font-family: 'Exo 2', sans-serif;
  }
+
+ @layer components {
+	.badge::-webkit-scrollbar {
+    width: 2.5vw;                  /* width of the entire scrollbar */
+  }
+
+  .badge::-webkit-scrollbar-track {
+    background: hsl(193, 38%, 86%);    
+    border-radius: 20px;          /* color of the tracking area */
+  }
+
+  .badge::-webkit-scrollbar-thumb {
+    background-color: hsl(150, 100%, 66%);    /* color of the scroll thumb */
+    border: 0.6vw solid hsl(193, 38%, 86%);
+    border-radius: 20px;       /* roundness of the scroll thumb */
+      /* creates padding around scroll thumb */  }
+
+    @media (min-width: 450px) {
+    .badge::-webkit-scrollbar {
+        width: 2vw;
+    }
+    
+    .badge::-webkit-scrollbar-track {
+      background: hsl(193, 38%, 86%);    
+      border-radius: 20px;          /* color of the tracking area */
+    }
+
+    .badge::-webkit-scrollbar-thumb {
+      border: 0.55vw solid hsl(193, 38%, 86%);
+    }
+}
+
+@media (min-width: 670px) {
+  .badge::-webkit-scrollbar {
+      width: 1.5vw;
+  }
+  
+  .badge::-webkit-scrollbar-track {
+    background: hsl(193, 38%, 86%);    
+    border-radius: 20px;          /* color of the tracking area */
+  }
+
+  .badge::-webkit-scrollbar-thumb {
+    border: 0.40vw solid hsl(193, 38%, 86%);
+  }
+}
+      
+  @media (min-width: 800px) {
+    .badge::-webkit-scrollbar {
+        width: 1vw;
+    }
+    
+    .badge::-webkit-scrollbar-track {
+      background: hsl(193, 38%, 86%);    
+      border-radius: 20px;          /* color of the tracking area */
+    }
+
+    .badge::-webkit-scrollbar-thumb {
+      border: 0.25vw solid hsl(193, 38%, 86%);
+    }
+}
+ }

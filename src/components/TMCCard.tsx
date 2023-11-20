@@ -1,6 +1,8 @@
 import React from "react";
 import "../App.css";
 import dice from "../assets/images/icon-dice.svg";
+import iconarrow from "../assets/images/icon-arrow-light.svg";
+import { useState } from "react";
 
 const TMCCard = () => {
   return (
@@ -9,11 +11,11 @@ const TMCCard = () => {
         <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none underline underline-offset-4 mb-[2.5vw]">
           TMC 311
         </div>
-        <div className="mb-[3vw] xl:mb-[10vw] bg-dark-grayish-blues w-[85vw] md:w-[75vw] lg:w-[80vw] mx-[7.5vw] md:mx-[12.5vw] rounded-[1.8vw] flex flex-col items-center justify-center px-[4vw] md:px-[2.8vw] lg:px-[2vw] pt-[6vw] md:pt-[4.2vw] lg:pt-[3vw] text-[6.5vw] md:text-[4.5vw] lg:text-[3.25vw]">
+        <div className="mb-[5vw] bg-dark-grayish-blues w-[85vw] md:w-[75vw] lg:w-[80vw] mx-[7.5vw] md:mx-[12.5vw] rounded-[1.8vw] flex flex-col items-center justify-center px-[4vw] md:px-[2.8vw] lg:px-[2vw] pt-[6vw] md:pt-[4.2vw] lg:pt-[3vw] text-[6.5vw] md:text-[4.5vw] lg:text-[3.25vw]">
           <div className="font-manrope mb-[6vw] md:mb-[4.2vw] lg:mb-[3vw] text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] text-neon-greens tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none">
             <div>ADVICE #</div>
           </div>
-          <div className="mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.14vw] lg:tracking-[-0.1vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues">
+          <div className="badge pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.14vw] lg:tracking-[-0.1vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues overflow-y-auto max-h-[18.8vh]">
             <div>
               "Knowing what God has promised is information, but knowing what to
               do to actualise it is revelation"
@@ -26,6 +28,7 @@ const TMCCard = () => {
                 href="https://www.google.com/search?q=bishop+david+oyedepo&sca_esv=573962864&sxsrf=AM9HkKn77XeDA5Z9BXtWfenZdT3kV5lAPw%3A1697547900092&ei=fIYuZfqkBcqAhbIP5PKB0AI&ved=0ahUKEwj60svckv2BAxVKQEEAHWR5ACoQ4dUDCBA&uact=5&oq=bishop+david+oyedepo&gs_lp=Egxnd3Mtd2l6LXNlcnAiFGJpc2hvcCBkYXZpZCBveWVkZXBvSABQAFgAcAB4AJABAJgBAKABAKoBALgBA8gBAOIDBBgAIEE&sclient=gws-wiz-serp"
                 target="_blank"
                 className=""
+                title="About Bishop David Oyedepo"
               >
                 Bishop David Oyedepo
               </a>
@@ -40,19 +43,7 @@ const TMCCard = () => {
             <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[28vw] md:w-[23.6vw] lg:w-[30vw] border-neon-greens"></div>
           </div>
           <div className="relative top-[7vw] md:top-[4.9vw] lg:top-[3.5vw] select-none flex flex-row gap-[1.5vw]">
-            <div className="">
-              <button
-                className="bg-light-cyans w-[14vw] md:w-[9.8vw] lg:w-[7vw] h-[14vw] md:h-[9.8vw] lg:h-[7vw] rounded-full flex flex-col items-center justify-center hover:shadow-[0_0_30px_5px_rgba(0,0,0,0.9)] hover:shadow-light-cyans cursor-pointer"
-                onClick={() => {}}
-              >
-                <img
-                  className="w-[7vw] md:w-[4.9vw] lg:w-[3.5vw]"
-                  src={dice}
-                  alt="A dice"
-                />
-              </button>
-            </div>
-            <div className="">
+            <div className="" title="Reset">
               <button
                 className="bg-neon-greens w-[14vw] md:w-[9.8vw] lg:w-[7vw] h-[14vw] md:h-[9.8vw] lg:h-[7vw] rounded-full flex flex-col items-center justify-center hover:shadow-[0_0_30px_5px_rgba(0,0,0,0.9)] hover:shadow-neon-greens cursor-pointer"
                 onClick={() => {}}
@@ -73,7 +64,7 @@ const TMCCard = () => {
             target="_blank"
             className="underline text-neon-greens tracking-wide"
           >
-            Rere Tooki
+            Rerel'Oluwa Tooki
           </a>
         </div>
       </div>
