@@ -2,12 +2,113 @@ import React from "react";
 import "../App.css";
 import dice from "../assets/images/icon-dice.svg";
 import iconarrow from "../assets/images/icon-arrow-light.svg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { db } from "../firebase";
+import { uid } from "uid";
+import { getDatabase, onValue, ref, set } from "firebase/database";
+
+type Item = {
+  id: number;
+  name: string;
+  quote: string;
+  url: string;
+};
 
 const TMCCard = () => {
+  const [todo, setTodo] = useState("");
+  const [todos, setTodos] = useState([] as any);
+
+  const [items, setItems] = useState<Item[]>([
+    { id: 1, name: "Item 1", quote: "do not play", url: "url lol" },
+    { id: 2, name: "Item 2", quote: "2do not play", url: "2url lol" },
+    { id: 3, name: "Item 3", quote: "3do not play", url: "3url lol" },
+  ]);
+
+  // Define the state to keep track of the current index
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  // Function to handle the button click and iterate through the array
+  const handleButtonClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  };
+
+  // const [tags, setTags] = useState(["happy", "cheerful"]);
+  // const [bugs, setBugs] = useState([] as any);
+
+  // const handleTodoChange = (e: any) => {
+  //   setTodo(e.target.value);
+  // };
+
+  //read
+  // useEffect(() => {
+  //   onValue(ref(db), (snapshot) => {
+  //     const data = snapshot.val();
+  //     // setTags([...data, "exciting"]);
+  //     console.log("rere");
+  //     console.log(tags);
+  //     console.log("The data is");
+  //     console.log(data);
+  //     console.log("The object.value property is");
+  //     console.log(Object.values(data));
+  //     const obj = Object.values(data);
+  //     for (const [country, capital] of Object.entries(obj)) {
+  //       console.log(country, capital);
+  //     }
+  //     console.log("jomi");
+  //     if (data !== null) {
+  //       console.log(Object.values(data));
+  //       console.log(data);
+  //       Object.values(data).map((todo) => {
+  //         setTodos((oldArray: any) => [...oldArray, todo]);
+  //       });
+  //     }
+  //   });
+  // }, []);
+
+  // //write
+  // const writeToDB = () => {
+  //   const uuid = uid();
+  //   set(ref(db, `/${uuid}`), {
+  //     todo,
+  //     uuid,
+  //   });
+  // };
   return (
     <>
-      <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen lg:min-h-d0">
+      <div>
+        <h1>Current Item: {items[currentIndex].quote}</h1>
+        <button onClick={handleButtonClick}>Next Item</button>
+      </div>
+      {/* <div>
+        <input
+          className="bg-dark-blues text-white"
+          type="text"
+          value={todo}
+          onChange={handleTodoChange}
+        />
+        <button onClick={writeToDB}>Submit</button>
+        {todos.map(
+          (todo: {
+            todo:
+              | string
+              | number
+              | boolean
+              | React.ReactElement<
+                  any,
+                  string | React.JSXElementConstructor<any>
+                >
+              | Iterable<React.ReactNode>
+              | React.ReactPortal
+              | null
+              | undefined;
+          }) => (
+            <>
+              <h1>{tags}</h1>
+            </>
+          )
+        )}
+      </div> */}
+      {/* <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen lg:min-h-d0">
         <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none underline underline-offset-4 mb-[2.5vw]">
           TMC 311
         </div>
@@ -67,7 +168,7 @@ const TMCCard = () => {
             Rerel'Oluwa Tooki
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

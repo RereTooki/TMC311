@@ -2,6 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import TMCCard from "./components/TMCCard";
+import { db } from "./firebase";
+import { uid } from "uid";
 
 function App() {
   const [count, setCount] = useState(0);
