@@ -679,7 +679,7 @@ const TMCCard = () => {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-0 left-0 ml-[2vw] pb-[1.2vw] text-light-cyans underline-offset-4 md:pb-[1.2vw] text-[2vw] nsm:text-[1.2vw] xl:text-[1vw]">
+        <div className="fixed bottom-0 left-0 ml-[2vw] pb-[1.2vw] text-light-cyans underline-offset-4 md:pb-[1.2vw] text-[2vw] nsm:text-[1.2vw] xl:text-[1vw] select-none">
           © 2023{" "}
           <a
             href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
