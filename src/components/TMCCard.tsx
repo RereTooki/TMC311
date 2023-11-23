@@ -94,12 +94,206 @@ const TMCCard = () => {
       url: "https://www.bible.com/bible/1/1JN.3.17-18.KJV",
     },
     {
-      id: 10,
-      name: "Item 10",
+      id: 11,
+      name: "Item 11",
+      quote: "Bear ye one another's burdens, and so fulfil the law of Christ.",
+      author: "Galatians 6:2",
+      url: "https://www.bible.com/bible/1/GAL.6.2.KJV",
+    },
+    {
+      id: 12,
+      name: "Item 12",
       quote:
-        "But whoso hath this world's good, and seeth his brother have need, and shutteth up his bowels of compassion from him, how dwelleth the love of God in him? My little children, let us not love in word, neither in tongue; but in deed and in truth.",
-      author: "1 John 3:17-18",
-      url: "https://www.bible.com/bible/1/1JN.3.17-18.KJV",
+        "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+      author: "Galatians 6:9",
+      url: "https://www.bible.com/bible/1/GAL.6.9.KJV",
+    },
+    {
+      id: 13,
+      name: "Item 13",
+      quote: "With good will doing service, as to the Lord, and not to men",
+      author: "Ephesians 6:7",
+      url: "https://www.bible.com/bible/1/EPH.6.7.KJV",
+    },
+    {
+      id: 14,
+      name: "Item 14",
+      quote:
+        "For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in: naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me. Then shall the righteous answer him, saying, Lord, when saw we thee an hungred, and fed thee? or thirsty, and gave thee drink? When saw we thee a stranger, and took thee in? or naked, and clothed thee? Or when saw we thee sick, or in prison, and came unto thee? And the King shall answer and say unto them, Verily I say unto you, Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me.",
+      author: "Matthew 25:35-40",
+      url: "https://www.bible.com/bible/1/MAT.25.35-40.KJV",
+    },
+    {
+      id: 15,
+      name: "Item 15",
+      quote:
+        "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+      author: "Matthew 5:16",
+      url: "https://www.bible.com/bible/1/MAT.5.16.KJV",
+    },
+    {
+      id: 16,
+      name: "Item 16",
+      quote:
+        "Charge them that are rich in this world, that they be not highminded, nor trust in uncertain riches, but in the living God, who giveth us richly all things to enjoy; that they do good, that they be rich in good works, ready to distribute, willing to communicate.",
+      author: "1 Timothy 6:17-18",
+      url: "https://www.bible.com/bible/1/1TI.6.17-18.KJV",
+    },
+    {
+      id: 17,
+      name: "Item 17",
+      quote:
+        "I the LORD search the heart, I try the reins, even to give every man according to his ways, and according to the fruit of his doings.",
+      author: "Jeremiah 17:10",
+      url: "https://www.bible.com/bible/1/JER.17.10.KJV",
+    },
+    {
+      id: 18,
+      name: "Item 18",
+      quote:
+        "Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal. And though I have the gift of prophecy, and understand all mysteries, and all knowledge; and though I have all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing.",
+      author: "1 Corinthians 13:1-3",
+      url: "https://www.bible.com/bible/1/1CO.13.1-3.KJV",
+    },
+    {
+      id: 19,
+      name: "Item 19",
+      quote:
+        "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
+      author: "Ephesians 4:32",
+      url: "https://www.bible.com/bible/1/EPH.4.32.KJV",
+    },
+    {
+      id: 20,
+      name: "Item 20",
+      quote:
+        "And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
+      author: "Romans 5:5",
+      url: "https://www.bible.com/bible/1/ROM.5.5.KJV",
+    },
+    {
+      id: 21,
+      name: "Item 21",
+      quote:
+        "And this they did, not as we hoped, but first gave their own selves to the Lord, and unto us by the will of God.",
+      author: "2 Corinthians 8:5",
+      url: "https://www.bible.com/bible/1/2CO.8.5.KJV",
+    },
+    {
+      id: 22,
+      name: "Item 22",
+      quote:
+        "Look not every man on his own things, but every man also on the things of others.",
+      author: "Philippians 2:4",
+      url: "https://www.bible.com/bible/1/PHP.2.4.KJV",
+    },
+    {
+      id: 23,
+      name: "Item 23",
+      quote:
+        "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+      author: "Galatians 6:9",
+      url: "https://www.bible.com/bible/1/gal.6.9",
+    },
+    {
+      id: 24,
+      name: "Item 24",
+      quote:
+        "But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors.",
+      author: "James 2:9",
+      url: "https://www.bible.com/bible/1/jas.2.9",
+    },
+    {
+      id: 25,
+      name: "Item 25",
+      quote:
+        "For God is not the author of confusion, but of peace, as in all churches of the saints.",
+      author: "1 Corinthians 14:33a",
+      url: "https://www.bible.com/bible/1/1co.14.33",
+    },
+    {
+      id: 26,
+      name: "Item 26",
+      quote:
+        "The way of the just is uprightness: thou, most upright, dost weigh the path of the just.",
+      author: "Isaiah 26:7",
+      url: "https://www.bible.com/bible/1/isa.26.7",
+    },
+    {
+      id: 27,
+      name: "Item 27",
+      quote:
+        "My people are destroyed for lack of knowledge: because thou hast rejected knowledge, I will also reject thee, that thou shalt be no priest to me: seeing thou hast forgotten the law of thy God, I will also forget thy children.",
+      author: "Hosea 4:6a",
+      url: "https://www.bible.com/bible/1/hos.4.6",
+    },
+    {
+      id: 28,
+      name: "Item 28",
+      quote:
+        "He that hath pity upon the poor lendeth unto the LORD; And that which he hath given will he pay him again.",
+      author: "Proverbs 19:17",
+      url: "https://www.bible.com/bible/1/pro.19.17",
+    },
+    {
+      id: 29,
+      name: "Item 29",
+      quote:
+        "There shall be an handful of corn in the earth upon the top of the mountains; The fruit thereof shall shake like Lebanon: And they of the city shall flourish like grass of the earth.",
+      author: "Psalm 72:16",
+      url: "https://www.bible.com/bible/1/psa.72.16",
+    },
+    {
+      id: 30,
+      name: "Item 30",
+      quote:
+        "Two are better than one; because they have a good reward for their labour.",
+      author: "Ecclesiastes 4:9",
+      url: "https://www.bible.com/bible/1/ecc.4.9",
+    },
+    {
+      id: 31,
+      name: "Item 31",
+      quote:
+        "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work",
+      author: "2 Corinthians 9:8",
+      url: "https://www.bible.com/bible/1/2co.9.8",
+    },
+    {
+      id: 32,
+      name: "Item 32",
+      quote:
+        "Take fast hold of instruction; let her not go: Keep her; for she is thy life.",
+      author: "Proverbs 4:13",
+      url: "https://www.bible.com/bible/1/pro.4.13",
+    },
+    {
+      id: 3,
+      name: "Item 3",
+      quote: "",
+      author: "",
+      url: "",
+    },
+    {
+      id: 3,
+      name: "Item 3",
+      quote: "",
+      author: "",
+      url: "",
+    },
+    {
+      id: 3,
+      name: "Item 3",
+      quote: "",
+      author: "",
+      url: "",
+    },
+    {
+      id: 3,
+      name: "Item 3",
+      quote: "",
+      author: "",
+      url: "",
     },
   ]);
 
@@ -173,7 +367,7 @@ const TMCCard = () => {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-0 left-0 ml-[2vw] pb-[1.2vw] text-light-cyans underline-offset-4 md:pb-[1.2vw] text-[3.5vw] sm:text-[3vw] md:text-[2.5vw] nsm:text-[13px] lg:text-[15px] xl:text-[1vw]">
+        <div className="fixed bottom-0 left-0 ml-[2vw] pb-[1.2vw] text-light-cyans underline-offset-4 md:pb-[1.2vw] text-[2vw] nsm:text-[1.2vw] xl:text-[1vw]">
           © 2023{" "}
           <a
             href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"

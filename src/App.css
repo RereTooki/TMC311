@@ -17,6 +17,7 @@ body{
  @layer components {
 	.badge::-webkit-scrollbar {
     width: 2.5vw;                  /* width of the entire scrollbar */
+    margin-left: 200px;
   }
 
   .badge::-webkit-scrollbar-track {
@@ -29,6 +30,12 @@ body{
     border: 0.6vw solid hsl(193, 38%, 86%);
     border-radius: 20px;       /* roundness of the scroll thumb */
       /* creates padding around scroll thumb */  }
+
+      @media (min-width: 300px) {
+        .badge::-webkit-scrollbar {
+            width: 2.2vw;
+        }
+      }
 
     @media (min-width: 450px) {
     .badge::-webkit-scrollbar {
