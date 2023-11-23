@@ -20,7 +20,7 @@ const TMCCard = () => {
       id: 1,
       name: "Item 1",
       quote:
-        "The aim of this course is to explore how a spiritual person- a child of God- can live in and make impact on the social and political context of the world",
+        "The aim of this course is to explore how a spiritual person - a child of God - can live in and make impact on the social and political context of the world.",
       author: "Dr. Lanre Amodu",
       url: "https://ng.linkedin.com/in/lanre-olaolu-amodu-959b3a17",
     },
@@ -28,7 +28,7 @@ const TMCCard = () => {
       id: 2,
       name: "Item 2",
       quote:
-        "So we are Christ’s ambassadors, God making His appeal as it were through us. We [as Christ’s personal representatives] beg you for His sake to lay hold of the divine favor [now offered you] and be reconciled to God",
+        "So we are Christ’s ambassadors, God making His appeal as it were through us. We [as Christ’s personal representatives] beg you for His sake to lay hold of the divine favor [now offered you] and be reconciled to God.",
       author: "2 Corinthians 5:20 (Amp)",
       url: "https://www.bible.com/bible/8/2CO.5.20.AMPC",
     },
@@ -36,7 +36,7 @@ const TMCCard = () => {
       id: 3,
       name: "Item 3",
       quote:
-        "God’s will and desire—His pleasure—is that we love Him. We cannot please God unless we love Him. We cannot love Him unless we know Him, and we cannot know Him unless we have faith in Him",
+        "“God’s will and desire — His pleasure — is that we love Him. We cannot please God unless we love Him. We cannot love Him unless we know Him, and we cannot know Him unless we have faith in Him.”",
       author: "Myles Munroe",
       url: "https://www.google.com/search?q=myles+munroe&oq=MYLES&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBwgCEAAYjwIyBwgDEAAYjwIyBwgEEAAYjwLSAQgxNTM0ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8",
     },
@@ -44,7 +44,7 @@ const TMCCard = () => {
       id: 4,
       name: "Item 4",
       quote:
-        "Your lives are like salt among the people. But if you, like salt, become bland, how can your ‘saltiness’ be restored? Flavorless salt is good for nothing and will be thrown out and trampled on by others.Your lives light up the world… And who would light a lamp and then hide it in an obscure place? … Let it shine brightly before others, so that your commendable works will shine as light upon them, and then they will give their praise to your Father in heaven",
+        "Your lives are like salt among the people. But if you, like salt, become bland, how can your ‘saltiness’ be restored? Flavorless salt is good for nothing and will be thrown out and trampled on by others.Your lives light up the world… And who would light a lamp and then hide it in an obscure place? … Let it shine brightly before others, so that your commendable works will shine as light upon them, and then they will give their praise to your Father in heaven.",
       author: "Matthew 5:13-16",
       url: "https://www.bible.com/bible/1849/MAT.5.13-16.TPT",
     },
@@ -52,7 +52,7 @@ const TMCCard = () => {
       id: 5,
       name: "Item 5",
       quote:
-        "This world and its desires are in the process of passing away, but those who love to do the will of God live forever",
+        "This world and its desires are in the process of passing away, but those who love to do the will of God live forever.",
       author: "1 John 2:15-17",
       url: "https://www.bible.com/bible/1849/1JN.2.17.TPT",
     },
@@ -60,7 +60,7 @@ const TMCCard = () => {
       id: 6,
       name: "Item 6",
       quote:
-        "Whose end is destruction, whose God is their belly, and whose glory is in their shame, who mind earthly things",
+        "Whose end is destruction, whose God is their belly, and whose glory is in their shame, who mind earthly things.",
       author: "Philippians 3:19",
       url: "https://www.bible.com/bible/1/PHP.3.19.KJV",
     },
@@ -83,7 +83,7 @@ const TMCCard = () => {
       id: 9,
       name: "Item 9",
       quote:
-        "But as it is written, Eye hath not seen, nor ear heard, Neither have entered into the heart of man, The things which God hath prepared for them that love him",
+        "But as it is written, Eye hath not seen, nor ear heard, Neither have entered into the heart of man, The things which God hath prepared for them that love him.",
       author: "1 Corinthians 2:9",
       url: "https://www.bible.com/bible/1/1CO.2.9.KJV",
     },
@@ -113,7 +113,7 @@ const TMCCard = () => {
     {
       id: 13,
       name: "Item 13",
-      quote: "With good will doing service, as to the Lord, and not to men",
+      quote: "With good will doing service, as to the Lord, and not to men.",
       author: "Ephesians 6:7",
       url: "https://www.bible.com/bible/1/EPH.6.7.KJV",
     },
@@ -257,7 +257,7 @@ const TMCCard = () => {
       id: 31,
       name: "Item 31",
       quote:
-        "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work",
+        "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work.",
       author: "2 Corinthians 9:8",
       url: "https://www.bible.com/bible/1/2co.9.8",
     },
@@ -328,7 +328,7 @@ const TMCCard = () => {
       id: 40,
       name: "Item 40",
       quote:
-        "Finally, be ye all of one mind, having compassion one of another, love as brethren, be pitiful, be courteous",
+        "Finally, be ye all of one mind, having compassion one of another, love as brethren, be pitiful, be courteous.",
       author: "1 Peter 3:8",
       url: "https://www.bible.com/bible/1/1pe.3.8",
     },
@@ -367,7 +367,7 @@ const TMCCard = () => {
       id: 45,
       name: "Item 45",
       quote:
-        "We make a living by what we get, but we make a life by what we give ",
+        "“We make a living by what we get, but we make a life by what we give”",
       author: "Winston Churchill",
       url: "https://hungryfaces.files.wordpress.com/2020/05/we-make-a-living-by-what-we-get.-we-make-a-life-by-what-we-give.-e1590431584229.png",
     },
@@ -451,25 +451,25 @@ const TMCCard = () => {
       id: 56,
       name: "Item 56",
       quote:
-        "The central task of citizenship is learning how to be 	good to one another and live peaceably with one another under the control of the rule of law",
+        "“The central task of citizenship is learning how to be 	good to one another and live peaceably with one another under the control of the rule of law”",
       author: "A.J. Patrick Liszkiewicz",
-      url: "",
+      url: "https://www.google.com/search?q=A.J.+Patrick+Liszkiewicz&source=lmns&bih=610&biw=1280&hl=en-US&sa=X&ved=2ahUKEwiysLe2zNqCAxWqtCcCHeguDTsQ_AUoAHoECAEQAA",
     },
     {
       id: 57,
       name: "Item 57",
       quote:
-        "Citizenship is a collection of rights and obligations which gives an individual a formal legal identity.",
+        "“Citizenship is a collection of rights and obligations which gives an individual a formal legal identity”",
       author: "Turner, 2004",
-      url: "",
+      url: "https://www.google.com/search?q=Citizenship+is+a+collection+of+rights+and+obligations+which+gives+an+individual+a+formal+legal+identity+Turner,+2004&source=lmns&bih=610&biw=1280&hl=en-US&sa=X&ved=2ahUKEwiUodTHzNqCAxWNlycCHVRBCeMQ_AUoAHoECAEQAA",
     },
     {
       id: 58,
       name: "Item 58",
       quote:
-        "Intelligence is not enough. Intelligence plus character, that is the goal of true education",
+        "“Intelligence is not enough. Intelligence plus character, that is the goal of true education”",
       author: "Martin Luther King Jr",
-      url: "",
+      url: "https://www.azquotes.com/quote/370661",
     },
     {
       id: 59,
@@ -477,23 +477,23 @@ const TMCCard = () => {
       quote:
         "Everyone must submit to governing authorities. For all authority comes from God, and those in positions of authority have been placed there by God.",
       author: "Romans 13:1",
-      url: "",
+      url: "https://www.bible.com/bible/1/ROM.13.1.KJV",
     },
     {
       id: 60,
       name: "Item 60",
       quote:
-        " “So you must submit to them, not only to avoid punishment, but also to keep a clear conscience.” ",
+        "So you must submit to them, not only to avoid punishment, but also to keep a clear conscience. ",
       author: "Romans 13:5",
-      url: "",
+      url: "https://www.bible.com/bible/1/rom.13.5",
     },
     {
       id: 61,
       name: "Item 61",
       quote:
-        "“Pay your taxes, too, for these same reasons. For government workers need to be paid. They are serving God in what they do”",
+        "Pay your taxes, too, for these same reasons. For government workers need to be paid. They are serving God in what they do",
       author: "Romans 13:6",
-      url: "",
+      url: "https://www.bible.com/bible/1/rom.13.6",
     },
     {
       id: 62,
@@ -501,7 +501,7 @@ const TMCCard = () => {
       quote:
         "“Owe nothing to anyone—except for your obligation to love one another. If you love your neighbor, you will fulfill the requirements of God’s law”",
       author: "Romans 13:8",
-      url: "",
+      url: "https://www.bible.com/bible/1/rom.13.8",
     },
     {
       id: 63,
@@ -509,7 +509,7 @@ const TMCCard = () => {
       quote:
         "“Love does no wrong to others, so love fulfills the requirements of God’s law”",
       author: "Romans 13:10",
-      url: "",
+      url: "https://www.bible.com/bible/1/rom.13.10",
     },
     {
       id: 64,
@@ -517,15 +517,15 @@ const TMCCard = () => {
       quote:
         "Because we belong to the day, we must live decent lives for all to see. Don’t participate in the darkness of wild parties and drunkenness, or in sexual promiscuity and immoral living, or in quarreling and jealousy.",
       author: "Romans 13:13",
-      url: "",
+      url: "https://www.bible.com/bible/1/rom.13.13",
     },
     {
       id: 65,
       name: "Item 65",
       quote:
-        "“Always be humble and gentle. Be patient with each other, making allowance for each other’s faults because of your love. 3 Make every effort to keep yourselves united in the Spirit, binding yourselves together with peace”",
+        "Always be humble and gentle. Be patient with each other, making allowance for each other’s faults because of your love. Make every effort to keep yourselves united in the Spirit, binding yourselves together with peace",
       author: "Ephesians 4:2-3",
-      url: "",
+      url: "https://www.bible.com/bible/111/EPH.4.2-3.NIV",
     },
     {
       id: 66,
@@ -533,35 +533,36 @@ const TMCCard = () => {
       quote:
         "“No one lights a lamp and then puts it under a basket. Instead, a lamp is placed on a stand, where it gives light to everyone in the house. E.g. Volunteer for community service, help the needy & the poor. In the same way, let your good deeds shine out for all to see, so that everyone will praise your heavenly Father”",
       author: "Matthew 5:15-16",
-      url: "",
+      url: "https://www.biblegateway.com/passage/?search=Matthew%205%3A15-16&version=NIV",
     },
     {
       id: 67,
       name: "Item 67",
       quote: "Pray for peace in Jerusalem. May all who love this city prosper.",
       author: "Psalm 122:6",
-      url: "",
+      url: "https://www.bible.com/bible/1/PSA.122.6.KJV",
     },
     {
       id: 68,
       name: "Item 68",
-      quote: "",
+      quote:
+        "For just as each of us has one body with many members, and these members do not all have the same function, so in Christ we, though many, form one body, and each member belongs to all the others.",
       author: "Romans 12:4–5",
-      url: "",
+      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A4%E2%80%935&version=NIV",
     },
     {
       id: 69,
       name: "Item 69",
-      quote: "",
+      quote: "Click the link",
       author: "Ecclesiastes 4:9-12 NIV",
-      url: "",
+      url: "https://www.biblegateway.com/passage/?search=Ecclesiastes+4%3A9-12+&version=NIV",
     },
     {
       id: 70,
       name: "Item 70",
       quote: "Can two walk together except they agree?’",
       author: "Amos 3:3",
-      url: "",
+      url: "https://www.bible.com/bible/1/amo.3.3",
     },
     {
       id: 71,
@@ -569,21 +570,23 @@ const TMCCard = () => {
       quote:
         "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”",
       author: "Maya Angelou",
-      url: "",
+      url: "https://www.goodreads.com/quotes/5934-i-ve-learned-that-people-will-forget-what-you-said-people",
     },
     {
       id: 72,
       name: "Item 72",
-      quote: "Offences will surely come but learn to forgive ",
+      quote:
+        "Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift.",
       author: "Matthew 5:24",
-      url: "",
+      url: "https://www.bible.com/bible/1/mat.5.24",
     },
     {
       id: 73,
       name: "Item 73",
-      quote: "Be a love initiator, Strive for peace always...",
+      quote:
+        "Blessed are the peacemakers: for they shall be called the children of God.",
       author: "Matthew 5:9",
-      url: "",
+      url: "https://www.bible.com/bible/1/mat.5.9",
     },
     {
       id: 74,
