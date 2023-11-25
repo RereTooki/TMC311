@@ -591,6 +591,132 @@ const TMCCard = () => {
     {
       id: 74,
       name: "Item 74",
+      quote: "“Life is not a funfair; it is a warfare”",
+      author: "Bishop David Oyedepo",
+      url: "https://www.goodreads.com/quotes/447963-life-is-not-a-funfair-life-is-a-warfare",
+    },
+    {
+      id: 75,
+      name: "Item 75",
+      quote:
+        "For thus saith the LORD that created the heavens; God himself that formed the earth and made it; he hath established it, he created it not in vain, he formed it to be inhabited: I am the LORD; and there is none else.",
+      author: "Isaiah 45:18 (KJV)",
+      url: "https://www.bible.com/bible/1/ISA.45.18.KJV",
+    },
+    {
+      id: 76,
+      name: "Item 76",
+      quote:
+        "“There is no mountain anywhere; everybody's mountain is his ignorance”",
+      author: "Bishop David Oyedepo",
+      url: "https://www.azquotes.com/quote/1383945",
+    },
+    {
+      id: 77,
+      name: "Item 77",
+      quote:
+        "But as truly as I live, all the earth shall be filled with the glory of the LORD.",
+      author: "Numbers 14:21 (KJV)",
+      url: "https://www.bible.com/bible/1/num.14.21",
+    },
+    {
+      id: 78,
+      name: "Item 78",
+      quote:
+        "For the earth shall be filled with the knowledge of the glory of the LORD, as the waters cover the sea.",
+      author: "Habakkuk 2:14 (KJV)",
+      url: "https://www.bible.com/bible/1/hab.2.14",
+    },
+    {
+      id: 79,
+      name: "Item 79",
+      quote:
+        "“Knowing what God has promised is information, but knowing what to do to actualize it is revelation.”",
+      author: "Bishop David Oyedepo",
+      url: "https://thegospel.ng/quote-of-the-day-10th-march-2021/",
+    },
+    {
+      id: 80,
+      name: "Item 80",
+      quote: "And he said, I beseech thee, shew me thy glory.",
+      author: "Exodus 33:18 (KJV)",
+      url: "https://www.bible.com/bible/1/exo.33.18",
+    },
+    {
+      id: 81,
+      name: "Item 81",
+      quote: "“Nothing finishes until you finish it with your mouth”",
+      author: "Bishop David Oyedepo",
+      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bis&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyBggCEEUYOzIGCAMQRRg7MgcIBBAAGI8CMgcIBRAAGI8CMgcIBhAAGI8CMgYIBxBFGDzSAQgyNTY2ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8",
+    },
+    {
+      id: 82,
+      name: "Item 82",
+      quote:
+        "And the LORD passed by before him, and proclaimed, The LORD, The LORD God, merciful and gracious, longsuffering, and abundant in goodness and truth.",
+      author: "Exodus 34:6 (KJV)",
+      url: "https://www.bible.com/bible/1/exo.34.6",
+    },
+    {
+      id: 83,
+      name: "Item 83",
+      quote: "“You are either spiritual or carnal; you cannot be neutral.”",
+      author: "Bishop David Oyedepo",
+      url: "https://quotefancy.com/quote/2921920/David-O-Oyedepo-You-are-either-spiritual-or-carnal-you-cannot-be-neutral",
+    },
+    {
+      id: 84,
+      name: "Item 84",
+      quote: "Understanding Divine Direction",
+      author: "By: Bishop David Oyedepo",
+      url: "https://winnerschapelcalgarydbs.org/understanding-divine-direction/",
+    },
+    {
+      id: 85,
+      name: "Item 85",
+      quote: "In Pursuit of Vision",
+      author: "By: Bishop David Oyedepo",
+      url: "https://winnerschapelcalgarydbs.org/in-pursuit-of-vision/",
+    },
+    {
+      id: 86,
+      name: "Item 86",
+      quote: "Understanding Vision",
+      author: "By: Bishop David Oyedepo",
+      url: "https://winnerschapelcalgarydbs.org/understanding-vision/",
+    },
+    {
+      id: 87,
+      name: "Item 87",
+      quote: "Message on Understanding God’s Plan For Me From His Book",
+      author: "By: Bishop David Oyedepo",
+      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgzMDc1ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
+    },
+    {
+      id: 88,
+      name: "Item 88",
+      quote: "“Until you begin to work, nothing works.”",
+      author: "Bishop David Oyedepo",
+      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
+    },
+    {
+      id: 89,
+      name: "Item 89",
+      quote:
+        "Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling.",
+      author: "Philippians 2:12 (KJV)",
+      url: "https://www.bible.com/bible/1/php.2.12",
+    },
+    {
+      id: 90,
+      name: "Item 90",
+      quote: "“A glorious result demands a serious approach”",
+      author: "Bishop David Oyedepo",
+      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
+    },
+    {
+      id: 91,
+      name: "Item 91",
       quote: "Thank You!",
       author: "Rerel'Oluwa Tooki",
       url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
@@ -609,7 +735,7 @@ const TMCCard = () => {
     if (currentIndex !== 0) {
       setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
     } else {
-      alert("Can't go back. Please move forward");
+      setCurrentIndex((prevIndex) => (prevIndex = 90));
     }
   };
 
