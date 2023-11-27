@@ -23,8 +23,7 @@ export default {
         'whites': 'hsl(0, 0%, 100%)',
         'grayish-blues': 'hsl(217, 19%, 38%)',
         'dark-grayish-blues': 'hsl(217, 19%, 24%)',
-        'dark-blues': 'hsl(218, 23%, 16%)' ,
-        
+        'dark-blues': 'hsl(218, 23%, 16%)' ,        
       },
       fontFamily: {
         manrope: ['Manrope', "sans-serif"],            
