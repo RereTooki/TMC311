@@ -798,7 +798,6 @@ const TMCCard = () => {
     console.log("search results length2: ");
     console.log(searchResults.length);
     results.length > 0 && setIsVisible2(true);
-    searchResults.length == 0 && setIsVisible2(false);
   };
 
   // Function to handle the list button click. it also acts as a clear search button
