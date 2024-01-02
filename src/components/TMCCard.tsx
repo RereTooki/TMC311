@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import "../App.css";
-import dice from "../assets/images/icon-dice.svg";
-import iconarrow from "../assets/images/icon-arrow-light.svg";
 import { useState, useEffect } from "react";
 import { MdSkipPrevious } from "react-icons/md";
 import { MdSkipNext } from "react-icons/md";
 import { IoMdSearch } from "react-icons/io";
 import { RiFilter2Line } from "react-icons/ri";
+
+import { FaChevronDown } from "react-icons/fa";
 
 type Item = {
   id: number;
@@ -815,22 +815,6 @@ const TMCCard = () => {
       category: "quote",
       url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
     },
-    {
-      id: 91,
-      name: "Item 91",
-      quote: "Thank You!",
-      author: "Rerel'Oluwa Tooki",
-      category: "quote",
-      url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
-    },
-    {
-      id: 91,
-      name: "Item 91",
-      quote: "Thank You!",
-      author: "Rerel'Oluwa Tooki",
-      category: "quote",
-      url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
-    },
   ]);
 
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -840,6 +824,13 @@ const TMCCard = () => {
 
   // Define the state to keep track of the visibility of the input box
   const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  // Define the state to keep track of the visibility of the options box
+  const [optionsIsVisible, setOptionsIsVisible] = useState<boolean>(false);
+
+  // Define the state to keep track of the visibility of the list options box
+  const [optionsListIsVisible, setOptionsListIsVisible] =
+    useState<boolean>(false);
 
   // Define the state for the search input and search results
   const [searchText, setSearchText] = useState<string>("");
@@ -872,6 +863,8 @@ const TMCCard = () => {
       : searchText
       ? setIsVisible(true)
       : setIsVisible(false);
+
+    optionsIsVisible && setOptionsIsVisible(false);
     // Filter the items based on the search text or show all if no text
     const results = searchText
       ? items.filter(
@@ -892,6 +885,9 @@ const TMCCard = () => {
 
   const handleFilterButtonClick = () => {
     console.log("filter button");
+    isVisible && setIsVisible(false);
+    !optionsIsVisible ? setOptionsIsVisible(true) : setOptionsIsVisible(false);
+    optionsListIsVisible && setOptionsListIsVisible(false);
   };
 
   // Function to handle the list button click. it also acts as a clear search button
@@ -900,6 +896,15 @@ const TMCCard = () => {
     setSearchResults([]);
     setSearchText("");
     setIsVisible(false);
+    optionsIsVisible && setOptionsIsVisible(false);
+  };
+
+  // Function to handle the options button click. it also acts as a clear search button
+  const handleOptionsButtonClick = () => {
+    console.log("options button");
+    !optionsListIsVisible
+      ? setOptionsListIsVisible(true)
+      : setOptionsListIsVisible(false);
   };
 
   // Function to handle Enter key press in the input field
@@ -923,19 +928,54 @@ const TMCCard = () => {
             {/* Search input and button */}
             <div className="flex flex-row gap-[2vw] justify-between pl-[2vw]">
               {isVisible && (
-                <div className="mml-[2vw] flex flex-col">
+                <div className="">
                   <input
                     id="signUp"
                     type="text"
                     ref={inputRef}
                     placeholder="Search..."
                     value={searchText}
-                    onKeyPress={handleInputKeyPress}
+                    onKeyDown={handleInputKeyPress}
                     className="w-[100%] relative top-[3px] xl:h-[90%] text-black px-[1.2vw] nxl:px-[0.8vw] pb-[0.2vw] nxl:pb-[0.4vw] nxl:pt-[0.3vw] rounded-md"
                     onChange={(e) => setSearchText(e.target.value)}
                   />
                 </div>
               )}
+              {optionsIsVisible && (
+                <div className="relative text-left">
+                  <div className="w-[100%]">
+                    <div className="">
+                      <button
+                        onClick={handleOptionsButtonClick}
+                        className="flex flex-row w-full items-center gap-x-1.5 rounded-md bg-white gap-[2vw] px-[1.2vw] py-[1.5vw] md:py-[0.8vw] lg:py-[0.4vw] xl:py-[0.8vw] nxl:px-3 nxl:py-2 nxl:text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 w-[100%] text-[2.8vw] md:text-[12px] lg:text-[14px] relative top-[0.4vw]"
+                      >
+                        <div className="borsder-2">Options</div>
+                        <FaChevronDown
+                          className="-msr-1  text-gray-400 bosrder-2"
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
+                  </div>{" "}
+                  {optionsListIsVisible && (
+                    <div className="absolute right-0 z-10 mt-2.5 md:mt-[2.1vw] lg:mt-[1.8vw] w-[160%] nxl:w-[200%] xl:w-[260%] rounded-lg bg-white leading-snug nxl:leading-tight text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[26px] text-dark-grayish-blues z-30 shadow-2xl border-2">
+                      <div className="border-t2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                        <button className=" w-full">All</button>
+                      </div>
+                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                        <button className="w-full">Books</button>
+                      </div>
+                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                        <button className=" w-full ">Quotes</button>
+                      </div>
+                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                        <button className="w-full ">Scriptures</button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
               <div className="">
                 <button className="h-[100%]" onClick={handleSearchButtonClick}>
                   <IoMdSearch color="aquamarine" />
@@ -970,13 +1010,13 @@ const TMCCard = () => {
           )}
           {/* Display search results */}
           {searchResults.length > 0 && (
-            <div className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-light-cyans text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[28px]">
+            <div className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-white text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:texts-[21px] nxl:text-[22px] xl:text-[25px]">
               <h2>Search Results:</h2>
               <ul className="list-decimal list-inside flex flex-col ">
                 {searchResults.map((result) => (
                   <button
                     onClick={() => handleListButtonClick(result.id)}
-                    className="border-t-2 border-neon-greens w-[100%] text-start hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md"
+                    className="border-t-2 border-light-cyans w-[100%] text-start hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md"
                   >
                     <li
                       className="whitespace-nowrap text-ellipsis overflow-hidden "
