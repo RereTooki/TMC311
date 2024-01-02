@@ -19,7 +19,7 @@ export default {
     extend: {
       colors: {   
         'light-cyans': 'hsl(193, 38%, 86%)',  //Added s at the end of every name to avoid clashes
-        'neon-greens': 'hsl(150, 100%, 66%)',
+        'neon-greens': 'hsl(160, 100%, 75%)',
         'whites': 'hsl(0, 0%, 100%)',
         'grayish-blues': 'hsl(217, 19%, 38%)',
         'dark-grayish-blues': 'hsl(217, 19%, 24%)',

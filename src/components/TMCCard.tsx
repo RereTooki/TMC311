@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../App.css";
 import dice from "../assets/images/icon-dice.svg";
 import iconarrow from "../assets/images/icon-arrow-light.svg";
 import { useState, useEffect } from "react";
 import { MdSkipPrevious } from "react-icons/md";
 import { MdSkipNext } from "react-icons/md";
+import { IoMdSearch } from "react-icons/io";
+import { RiFilter2Line } from "react-icons/ri";
 
 type Item = {
   id: number;
@@ -721,10 +723,43 @@ const TMCCard = () => {
       author: "Rerel'Oluwa Tooki",
       url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
     },
+    {
+      id: 91,
+      name: "Item 91",
+      quote: "Thank You!",
+      author: "Rerel'Oluwa Tooki",
+      url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
+    },
+    {
+      id: 91,
+      name: "Item 91",
+      quote: "Thank You!",
+      author: "Rerel'Oluwa Tooki",
+      url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
+    },
   ]);
+
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   // Define the state to keep track of the current index
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  // Define the state to keep track of the visibility of the input box
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  // Define the state to keep track of the visibility of the search result box
+  const [isVisible2, setIsVisible2] = useState<boolean>(false);
+
+  // Define the state for the search input and search results
+  const [searchText, setSearchText] = useState<string>("");
+  const [searchResults, setSearchResults] = useState<Item[]>([]);
+
+  // Use useEffect to focus on the input field when it becomes visible
+  useEffect(() => {
+    if (isVisible && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isVisible]);
 
   // Function to handle the button click and iterate through the array
   const handleButtonClick = () => {
@@ -739,6 +774,49 @@ const TMCCard = () => {
     }
   };
 
+  // Function to handle the search button click
+  const handleSearchButtonClick = () => {
+    isVisible == false
+      ? setIsVisible(true)
+      : searchText
+      ? setIsVisible(true)
+      : setIsVisible(false);
+    // Filter the items based on the search text or show all if no text
+    const results = searchText
+      ? items.filter(
+          (item) =>
+            item.quote.toLowerCase().includes(searchText.toLowerCase()) ||
+            item.author.toLowerCase().includes(searchText.toLowerCase())
+        )
+      : [];
+    console.log("results length:");
+    console.log(results.length);
+    console.log("search results length1: ");
+    console.log(searchResults.length);
+
+    setSearchResults(results);
+    console.log("search results length2: ");
+    console.log(searchResults.length);
+    results.length > 0 && setIsVisible2(true);
+    searchResults.length == 0 && setIsVisible2(false);
+  };
+
+  // Function to handle the list button click. it also acts as a clear search button
+  const handleListButtonClick = (id: number) => {
+    setCurrentIndex(id - 1);
+    setSearchResults([]);
+    setSearchText("");
+    setIsVisible(false);
+    setIsVisible2(false);
+  };
+
+  // Function to handle Enter key press in the input field
+  const handleInputKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && searchText.trim() !== "") {
+      handleSearchButtonClick();
+    }
+  };
+
   return (
     <>
       {/* <div>
@@ -746,25 +824,101 @@ const TMCCard = () => {
         <button onClick={handleButtonClick}>Next Item</button>
       </div> */}
 
-      <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen lg:min-h-d0">
-        <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none underline underline-offset-4 mb-[2.5vw]">
-          TMC 311
+      <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen">
+        <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none mb-[2.5vw] flex flex-row w-[85vw] md:w-[75vw] lg:w-[80vw]">
+          <div className="flex flex-row ml-[36%] md:ml-[39%] lg:ml-[43%] w-[100%] justify-between ">
+            <div className="underline underline-offset-4  ">TMC 311</div>
+            {/* Search input and button */}
+            <div className="flex flex-row gap-[2vw] justify-between pl-[2vw]">
+              {isVisible && (
+                <div className="mml-[2vw] flex flex-col">
+                  <input
+                    id="signUp"
+                    type="text"
+                    ref={inputRef}
+                    placeholder="Search..."
+                    value={searchText}
+                    onKeyPress={handleInputKeyPress}
+                    className="w-[100%] relative top-[3px] xl:h-[90%] text-black px-[1.2vw] nxl:px-[0.8vw] pb-[0.2vw] nxl:pb-[0.4vw] nxl:pt-[0.3vw] rounded-md"
+                    onChange={(e) => setSearchText(e.target.value)}
+                  />
+                  {/* Display search results
+                  {searchResults.length > 0 && (
+                    <div className="border-2 absolute left-[8vw] md:left-[12.5vw] lg:left-[10vw] nxl:left-[10vw] xl:left-[10vw] w-[80vw] md:w-[70vw] lg:w-[80vw] mt-[13.5vw] md:mt-[10vw] ml-[2vw] md:ml-[2.4vw] nxl:w overflow-x-hidden overflow-y-scroll  scroll rounded-md bg-light-cyans text-dark-grayish-blues z-20 h-[62vw] md:h-[vw] smax-h-[200px]">
+                      <h2>Search Results:</h2>
+                      <ul className="list-decimal list-inside flex flex-col">
+                        {searchResults.map((result) => (
+                          <button
+                            onClick={() => handleListButtonClick(result.id)}
+                            className="border-t-2 border-neon-greens w-[100%] text-start  "
+                          >
+                            <li
+                              className="whitespace-nowrap text-ellipsis overflow-hidden"
+                              key={result.id}
+                            >
+                              {result.quote}
+                            </li>
+                          </button>
+                        ))}
+                      </ul>
+                    </div>
+                  )} */}
+                </div>
+              )}
+              <div className="">
+                <button className="h-[100%]" onClick={handleSearchButtonClick}>
+                  <IoMdSearch color="aquamarine" />
+                </button>
+              </div>
+              <div className="">
+                <button className="h-[100%]" onClick={handleSearchButtonClick}>
+                  <RiFilter2Line
+                    color="aquamarine"
+                    title="Sort by Quotes, Scriptures, Books3"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="mb-[5vw] bg-dark-grayish-blues w-[85vw] md:w-[75vw] lg:w-[80vw] mx-[7.5vw] md:mx-[12.5vw] rounded-[1.8vw] flex flex-col items-center justify-center px-[4vw] md:px-[2.8vw] lg:px-[2vw] pt-[6vw] md:pt-[4.2vw] text-[6.5vw] md:text-[4.5vw] lg:text-[3.25vw]">
-          <div className="font-manrope mb-[6vw] md:mb-[4.2vw] lg:mb-[3vw] text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none">
+        <div className="mb-[5vw] bg-dark-grayish-blues w-[85vw] md:w-[75vw] lg:w-[80vw] mx-[7.5vw] md:mx-[12.5vw] rounded-[1.8vw] flex flex-col items-center justify-center px-[4vw] md:px-[2.8vw] lg:px-[2vw] pt-[6vw] md:pt-[19px] nxl:pt-[35px] text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[28px] xl:text-[37px] leading-snug lg:leading-normal nxl:leading-snug">
+          <div className="font-manrope mb-[6vw] md:mb-[18px] nxl:mb-[30px] xl:mb-[35px]  text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none">
             <div className="flex flex-row gap-[3vw] md:gap-[2.1vw] lg:gap-[1.5vw]">
               <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[21.5vw] md:w-[20.5vw] lg:w-[26.7vw] border-light-cyans"></div>
               <div>ADVICE</div>
               <div className="text-neon-greens underline underline-offset-4 tracking-wider decoration-light-cyans/70">
                 #{items[currentIndex].id}
               </div>
-
               <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[21.5vw] md:w-[20.3vw] lg:w-[26.7vw] border-neon-greens"></div>
             </div>
           </div>
-          <div className="badge pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.14vw] lg:tracking-[-0.1vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues overflow-y-auto max-h-[28.8vh] ">
-            <div>{items[currentIndex].quote}</div>
-          </div>
+          {!isVisible2 && (
+            <div className="scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues overflow-y-auto max-h-[28.8vh] ">
+              <div>{items[currentIndex].quote}</div>
+            </div>
+          )}
+          {/* Display search results */}
+          {searchResults.length > 0 && (
+            <div className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-light-cyans text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[28px]">
+              <h2>Search Results:</h2>
+              <ul className="list-decimal list-inside flex flex-col ">
+                {searchResults.map((result) => (
+                  <button
+                    onClick={() => handleListButtonClick(result.id)}
+                    className="border-t-2 border-neon-greens w-[100%] text-start hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md"
+                  >
+                    <li
+                      className="whitespace-nowrap text-ellipsis overflow-hidden "
+                      key={result.id}
+                    >
+                      {result.quote}
+                    </li>
+                  </button>
+                ))}
+              </ul>
+            </div>
+          )}
+
           <div className="flex self-end mr-[1.5vw] md:mr-[4.8vw] lg:mr-[3.3vw] hover:scale-[1.1] hover:mr-[4.8vw] hover:md:scale-[1.2] hover:md:mr-[5.8vw] hover:md:mr-[8.1vw] hover:lg:mr-[5.8vw] select-none">
             <div className="border-t-[0.2vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] w-[10vw] md:w-[7vw] lg:w-[5vw] border-neon-greens mr-[1.5vw] md:mr-[1vw]"></div>
             <div className="text-light-cyans text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] underline underline-offset-4 tracking-wider decoration-neon-greens/70">
@@ -778,14 +932,7 @@ const TMCCard = () => {
               </a>
             </div>
           </div>
-          {/* <div className="flex flex-row gap-[3vw] md:gap-[2.1vw] lg:gap-[1.5vw]">
-            <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[28vw] md:w-[23.6vw] lg:w-[30vw] border-light-cyans"></div>
-            <div className="flex flex-row gap-[2vw] md:gap-[1.4vw]">
-              <div className=" border-[2.8vw] md:border-[1.96vw] lg:border-[1.4vw] rounded-[0.78vw] md:rounded-[0.54vw] lg:rounded-[0.39vw] border-double border-neon-greens"></div>
-              <div className=" border-[2.8vw] md:border-[1.96vw] lg:border-[1.4vw] rounded-[0.78vw] md:rounded-[0.54vw] lg:rounded-[0.39vw] border-double border-light-cyans"></div>
-            </div>
-            <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[28vw] md:w-[23.6vw] lg:w-[30vw] border-neon-greens"></div>
-          </div> */}
+
           <div className="relative top-[5vw] md:top-[3.9vw] lg:top-[2.5vw] select-none flex flex-row gap-[3.5vw] lg:gap-[2vw]">
             <div className="" title="Previous">
               <button
