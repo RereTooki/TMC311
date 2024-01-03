@@ -846,11 +846,12 @@ const TMCCard = () => {
     }
   }, [isVisible]);
 
-  // Function to handle the button click and iterate through the array
+  // Function to handle the next button click and iterate through the array
   const handleButtonClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
   };
 
+  // Function to handle the previous button click and iterate through the array
   const handleButtonClickRev = () => {
     if (currentIndex !== 0) {
       setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
