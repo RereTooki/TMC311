@@ -923,7 +923,9 @@ const TMCCard = () => {
     console.log("search results length2: ");
     console.log(searchResults.length);
 
-    setOptionsBoxText("ALL");
+    setOptionsBoxText("Option");
+
+    // !searchText && setOptionsBoxText("ALL");
   };
 
   // Function to handle the list button click. it also acts as a clear search button
