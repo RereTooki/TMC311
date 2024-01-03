@@ -846,13 +846,45 @@ const TMCCard = () => {
     }
   }, [isVisible]);
 
+  // // Function to handle the next button click and iterate through the array
+  // const handleNextButtonClick = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  // };
+
   // Function to handle the next button click and iterate through the array
-  const handleButtonClick = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+  const handleNextButtonClick = () => {
+    console.log("sr less than 0");
+    console.log(searchResults.length);
+    if (searchResults.length > 0) {
+      console.log("sr >0");
+      // Find the index of the current item in searchResults
+      const currentIndexInSearch = searchResults.findIndex(
+        (item) => item.id === items[currentIndex].id
+      );
+
+      // Calculate the next index in searchResults
+      const nextIndexInSearch =
+        (currentIndexInSearch + 1) % searchResults.length;
+
+      // Find the corresponding item in items array
+      const nextItemInSearchResults = searchResults[nextIndexInSearch];
+
+      // Find the index of nextItemInSearchResults in the items array
+      const nextIndexInItems = items.findIndex(
+        (item) => item.id === nextItemInSearchResults.id
+      );
+
+      // Set the currentIndex to the next index in items array
+      setCurrentIndex(nextIndexInItems);
+    } else {
+      // If searchResults is empty, simply increment the index
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+      console.log("sr equalts to 0");
+    }
   };
 
   // Function to handle the previous button click and iterate through the array
-  const handleButtonClickRev = () => {
+  const handlePrevButtonClick = () => {
     if (currentIndex !== 0) {
       setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
     } else {
@@ -1125,7 +1157,7 @@ const TMCCard = () => {
             <div className="" title="Previous">
               <button
                 className="bg-neon-greens w-[12vw] md:w-[7.8vw] lg:w-[5vw] h-[12vw] md:h-[7.8vw] lg:h-[5vw] rounded-full flex flex-col items-center justify-center hover:shadow-[0_0_30px_5px_rgba(0,0,0,0.9)] hover:shadow-neon-greens cursor-pointer"
-                onClick={handleButtonClickRev}
+                onClick={handlePrevButtonClick}
               >
                 <MdSkipPrevious />
               </button>
@@ -1133,7 +1165,7 @@ const TMCCard = () => {
             <div className="" title="Next">
               <button
                 className="bg-neon-greens w-[12vw] md:w-[7.8vw] lg:w-[5vw] h-[12vw] md:h-[7.8vw] lg:h-[5vw] rounded-full flex flex-col items-center justify-center hover:shadow-[0_0_30px_5px_rgba(0,0,0,0.9)] hover:shadow-neon-greens cursor-pointer"
-                onClick={handleButtonClick}
+                onClick={handleNextButtonClick}
               >
                 <MdSkipNext />
               </button>
