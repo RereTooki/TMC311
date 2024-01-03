@@ -1165,7 +1165,7 @@ const TMCCard = () => {
             </div>
           )}
           {/* Display search results */}
-          {isVisible2 == true && (
+          {isVisible2 == true && searchResults.length !== 0 && (
             <div className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-white text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:texts-[21px] nxl:text-[22px] xl:text-[25px]">
               <h2>Search Results:</h2>
               <ul className="list-decimal list-inside flex flex-col ">
