@@ -25,7 +25,7 @@ const TMCCard = () => {
       quote:
         "The aim of this course is to explore how a spiritual person - a child of God - can live in and make impact on the social and political context of the world.",
       author: "Dr. Lanre Amodu",
-      category: "bible",
+      category: "Bible",
       url: "https://ng.linkedin.com/in/lanre-olaolu-amodu-959b3a17",
     },
     {
@@ -34,7 +34,7 @@ const TMCCard = () => {
       quote:
         "So we are Christ’s ambassadors, God making His appeal as it were through us. We [as Christ’s personal representatives] beg you for His sake to lay hold of the divine favor [now offered you] and be reconciled to God.",
       author: "2 Corinthians 5:20 (Amp)",
-      category: "bible",
+      category: "Bible",
       url: "https://www.bible.com/bible/8/2CO.5.20.AMPC",
     },
     {
@@ -43,7 +43,7 @@ const TMCCard = () => {
       quote:
         "“God’s will and desire — His pleasure — is that we love Him. We cannot please God unless we love Him. We cannot love Him unless we know Him, and we cannot know Him unless we have faith in Him.”",
       author: "Myles Munroe",
-      category: "bible",
+      category: "Bible",
       url: "https://www.google.com/search?q=myles+munroe&oq=MYLES&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBwgCEAAYjwIyBwgDEAAYjwIyBwgEEAAYjwLSAQgxNTM0ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8",
     },
     {
@@ -52,7 +52,7 @@ const TMCCard = () => {
       quote:
         "Your lives are like salt among the people. But if you, like salt, become bland, how can your ‘saltiness’ be restored? Flavorless salt is good for nothing and will be thrown out and trampled on by others. Your lives light up the world… And who would light a lamp and then hide it in an obscure place? … Let it shine brightly before others, so that your commendable works will shine as light upon them, and then they will give their praise to your Father in heaven.",
       author: "Matthew 5:13-16",
-      category: "bible",
+      category: "Bible",
       url: "https://www.bible.com/bible/1849/MAT.5.13-16.TPT",
     },
     {
@@ -828,6 +828,9 @@ const TMCCard = () => {
   // Define the state to keep track of the visibility of the options box
   const [optionsIsVisible, setOptionsIsVisible] = useState<boolean>(false);
 
+  // Define the state to update the text f the options box
+  const [optionsBoxText, setOptionsBoxText] = useState<string>("Option");
+
   // Define the state to keep track of the visibility of the list options box
   const [optionsListIsVisible, setOptionsListIsVisible] =
     useState<boolean>(false);
@@ -881,6 +884,16 @@ const TMCCard = () => {
     setSearchResults(results);
     console.log("search results length2: ");
     console.log(searchResults.length);
+
+    setOptionsBoxText("ALL");
+  };
+
+  // Function to handle the list button click. it also acts as a clear search button
+  const handleListButtonClick = (id: number) => {
+    setCurrentIndex(id - 1);
+    setSearchResults([]);
+    setSearchText("");
+    setIsVisible(false);
   };
 
   const handleFilterButtonClick = () => {
@@ -890,21 +903,51 @@ const TMCCard = () => {
     optionsListIsVisible && setOptionsListIsVisible(false);
   };
 
-  // Function to handle the list button click. it also acts as a clear search button
-  const handleListButtonClick = (id: number) => {
-    setCurrentIndex(id - 1);
-    setSearchResults([]);
-    setSearchText("");
-    setIsVisible(false);
-    optionsIsVisible && setOptionsIsVisible(false);
-  };
-
-  // Function to handle the options button click. it also acts as a clear search button
+  // Function to handle the options button click. Displays the list of options
   const handleOptionsButtonClick = () => {
     console.log("options button");
     !optionsListIsVisible
       ? setOptionsListIsVisible(true)
       : setOptionsListIsVisible(false);
+  };
+
+  // Function to handle the options button click. Displays everything.
+  const handleAllButtonClick = () => {
+    console.log("ALL button");
+    setOptionsListIsVisible(false);
+    const allResults = items;
+    setSearchResults(allResults);
+    setOptionsBoxText("ALL");
+    console.log(allResults);
+  };
+
+  // Function to handle the options button click. Displays all the books.
+  const handleBooksButtonClick = () => {
+    console.log("Books button");
+    setOptionsListIsVisible(false);
+    const bookResults = items.filter((item) => item.author.includes("By: "));
+    setSearchResults(bookResults);
+    setOptionsBoxText("Book");
+  };
+
+  // Function to handle the options button click. Displays all the quotes.
+  const handleQuotesButtonClick = () => {
+    console.log("Quotes button");
+    setOptionsListIsVisible(false);
+    const quoteResults = items.filter((item) => item.quote.includes("“"));
+    setSearchResults(quoteResults);
+    setOptionsBoxText("Quote");
+  };
+
+  // Function to handle the options button click. Displays all the scriptures.
+  const handleScripturesButtonClick = () => {
+    console.log("Scriptures button");
+    setOptionsListIsVisible(false);
+    setOptionsBoxText("Scripture");
+    const scriptureResults = items.filter((item) => item.quote.includes(":"));
+    setSearchResults(scriptureResults);
+    //     const scriptureResults = items.filter((item) => item.category === "Bible");
+    // setSearchResults(scriptureResults);
   };
 
   // Function to handle Enter key press in the input field
@@ -949,7 +992,11 @@ const TMCCard = () => {
                         onClick={handleOptionsButtonClick}
                         className="flex flex-row w-full items-center gap-x-1.5 rounded-md bg-white gap-[2vw] px-[1.2vw] py-[1.5vw] md:py-[0.8vw] lg:py-[0.4vw] xl:py-[0.8vw] nxl:px-3 nxl:py-2 nxl:text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 w-[100%] text-[2.8vw] md:text-[12px] lg:text-[14px] relative top-[0.4vw]"
                       >
-                        <div className="borsder-2">Options</div>
+                        <div className="borsder-2">
+                          {optionsBoxText === "ALL"
+                            ? optionsBoxText
+                            : optionsBoxText + "s"}
+                        </div>
                         <FaChevronDown
                           className="-msr-1  text-gray-400 bosrder-2"
                           aria-hidden="true"
@@ -958,18 +1005,38 @@ const TMCCard = () => {
                     </div>
                   </div>{" "}
                   {optionsListIsVisible && (
-                    <div className="absolute right-0 z-10 mt-2.5 md:mt-[2.1vw] lg:mt-[1.8vw] w-[160%] nxl:w-[200%] xl:w-[260%] rounded-lg bg-white leading-snug nxl:leading-tight text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[26px] text-dark-grayish-blues z-30 shadow-2xl border-2">
+                    <div className="absolute right-0 z-10 mt-2.5 md:mt-[2.1vw] lg:mt-[1.8vw] min-w-[25vw] lg:min-w-[20vw] xl:min-w-[15vw] rounded-lg bg-white leading-snug nxl:leading-tight text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[26px] text-dark-grayish-blues z-30 shadow-2xl border-2 ">
                       <div className="border-t2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
-                        <button className=" w-full">All</button>
+                        <button
+                          onClick={handleAllButtonClick}
+                          className=" w-full"
+                        >
+                          All
+                        </button>
                       </div>
                       <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
-                        <button className="w-full">Books</button>
+                        <button
+                          onClick={handleBooksButtonClick}
+                          className="w-full"
+                        >
+                          Books
+                        </button>
                       </div>
                       <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
-                        <button className=" w-full ">Quotes</button>
+                        <button
+                          onClick={handleQuotesButtonClick}
+                          className=" w-full "
+                        >
+                          Quotes
+                        </button>
                       </div>
-                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
-                        <button className="w-full ">Scriptures</button>
+                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans text-[4.8vw] md:text-[17px] lg:text-[19px] nxl:text-[24px] xl:text-[26px]">
+                        <button
+                          onClick={handleScripturesButtonClick}
+                          className="w-full "
+                        >
+                          Scriptures
+                        </button>
                       </div>
                     </div>
                   )}
@@ -978,14 +1045,17 @@ const TMCCard = () => {
 
               <div className="">
                 <button className="h-[100%]" onClick={handleSearchButtonClick}>
-                  <IoMdSearch color="aquamarine" />
+                  <IoMdSearch
+                    color="aquamarine"
+                    title="Search for any Book, Quote or Scripture"
+                  />
                 </button>
               </div>
               <div className="">
                 <button className="h-[100%]" onClick={handleFilterButtonClick}>
                   <RiFilter2Line
                     color="aquamarine"
-                    title="Sort by Quotes, Scriptures, Books3"
+                    title="Sort by Books, Quotes or Scriptures"
                   />
                 </button>
               </div>
@@ -996,7 +1066,11 @@ const TMCCard = () => {
           <div className="font-manrope mb-[6vw] md:mb-[18px] nxl:mb-[30px] xl:mb-[35px]  text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none">
             <div className="flex flex-row gap-[3vw] md:gap-[2.1vw] lg:gap-[1.5vw]">
               <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[21.5vw] md:w-[20.5vw] lg:w-[26.7vw] border-light-cyans"></div>
-              <div>ADVICE</div>
+              <div>
+                {optionsBoxText === "ALL" || optionsBoxText === "Option"
+                  ? "ADVICE"
+                  : optionsBoxText.toUpperCase()}
+              </div>
               <div className="text-neon-greens underline underline-offset-4 tracking-wider decoration-light-cyans/70">
                 #{items[currentIndex].id}
               </div>
@@ -1022,7 +1096,9 @@ const TMCCard = () => {
                       className="whitespace-nowrap text-ellipsis overflow-hidden "
                       key={result.id}
                     >
-                      {result.quote}
+                      {optionsBoxText === "ALL" || optionsBoxText === "Option"
+                        ? result.quote
+                        : result.author + " - " + result.quote}
                     </li>
                   </button>
                 ))}
