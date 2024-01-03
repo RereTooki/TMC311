@@ -967,10 +967,10 @@ const TMCCard = () => {
     setCurrentIndex(id - 1);
     setIsVisible2(false);
 
-    setSearchgText("");
-    setIsVisdible(false);
-    setIsVisible2(false);
-    setSearchgResults([]);
+    // setSearchgText("");
+    // setIsVisdible(false);
+    // setIsVisible2(false);
+    // setSearchgResults([]);
   };
 
   const handleFilterButtonClick = () => {
