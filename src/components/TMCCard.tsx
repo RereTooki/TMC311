@@ -825,6 +825,9 @@ const TMCCard = () => {
   // Define the state to keep track of the visibility of the input box
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
+  // Define the state to keep track of the visibility of the search results box
+  const [isVisible2, setIsVisible2] = useState<boolean>(false);
+
   // Define the state to keep track of the visibility of the options box
   const [optionsIsVisible, setOptionsIsVisible] = useState<boolean>(false);
 
@@ -853,7 +856,7 @@ const TMCCard = () => {
 
   // Function to handle the next button click and iterate through the array
   const handleNextButtonClick = () => {
-    console.log("sr less than 0");
+    console.log("sr length is:");
     console.log(searchResults.length);
     if (searchResults.length > 0) {
       console.log("sr >0");
@@ -900,6 +903,8 @@ const TMCCard = () => {
       ? setIsVisible(true)
       : setIsVisible(false);
 
+    searchText && setIsVisible2(true);
+
     optionsIsVisible && setOptionsIsVisible(false);
     // Filter the items based on the search text or show all if no text
     const results = searchText
@@ -924,9 +929,12 @@ const TMCCard = () => {
   // Function to handle the list button click. it also acts as a clear search button
   const handleListButtonClick = (id: number) => {
     setCurrentIndex(id - 1);
-    setSearchResults([]);
-    setSearchText("");
-    setIsVisible(false);
+    setIsVisible2(false);
+
+    setSearchgText("");
+    setIsVisdible(false);
+    setIsVisible2(false);
+    setSearchgResults([]);
   };
 
   const handleFilterButtonClick = () => {
@@ -952,6 +960,7 @@ const TMCCard = () => {
     setSearchResults(allResults);
     setOptionsBoxText("ALL");
     console.log(allResults);
+    setIsVisible2(true);
   };
 
   // Function to handle the options button click. Displays all the books.
@@ -961,6 +970,7 @@ const TMCCard = () => {
     const bookResults = items.filter((item) => item.author.includes("By: "));
     setSearchResults(bookResults);
     setOptionsBoxText("Book");
+    setIsVisible2(true);
   };
 
   // Function to handle the options button click. Displays all the quotes.
@@ -970,6 +980,7 @@ const TMCCard = () => {
     const quoteResults = items.filter((item) => item.quote.includes("“"));
     setSearchResults(quoteResults);
     setOptionsBoxText("Quote");
+    setIsVisible2(true);
   };
 
   // Function to handle the options button click. Displays all the scriptures.
@@ -979,6 +990,7 @@ const TMCCard = () => {
     setOptionsBoxText("Scripture");
     const scriptureResults = items.filter((item) => item.quote.includes(":"));
     setSearchResults(scriptureResults);
+    setIsVisible2(true);
     //     const scriptureResults = items.filter((item) => item.category === "Bible");
     // setSearchResults(scriptureResults);
   };
@@ -1110,13 +1122,14 @@ const TMCCard = () => {
               <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[21.5vw] md:w-[20.3vw] lg:w-[26.7vw] border-neon-greens"></div>
             </div>
           </div>
-          {searchResults.length == 0 && (
+          {/* Display quotes/all results */}
+          {(searchResults.length == 0 || isVisible2 == false) && (
             <div className="scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues overflow-y-auto max-h-[28.8vh] ">
               <div>{items[currentIndex].quote}</div>
             </div>
           )}
           {/* Display search results */}
-          {searchResults.length > 0 && (
+          {isVisible2 == true && (
             <div className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-white text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:texts-[21px] nxl:text-[22px] xl:text-[25px]">
               <h2>Search Results:</h2>
               <ul className="list-decimal list-inside flex flex-col ">
