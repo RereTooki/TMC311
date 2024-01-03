@@ -886,12 +886,45 @@ const TMCCard = () => {
     }
   };
 
+  // // Function to handle the previous button click and iterate through the array
+  // const handlePrevButtonClick = () => {
+  //   if (currentIndex !== 0) {
+  //     setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
+  //   } else {
+  //     setCurrentIndex((prevIndex) => (prevIndex = 90));
+  //   }
+  // };
+
   // Function to handle the previous button click and iterate through the array
   const handlePrevButtonClick = () => {
-    if (currentIndex !== 0) {
-      setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
+    if (searchResults.length > 0) {
+      console.log("sr >0");
+      // Find the index of the current item in searchResults
+      const currentIndexInSearch = searchResults.findIndex(
+        (item) => item.id === items[currentIndex].id
+      );
+
+      // Calculate the next index in searchResults
+      const nextIndexInSearch =
+        (currentIndexInSearch - 1) % searchResults.length;
+
+      // Find the corresponding item in items array
+      const nextItemInSearchResults = searchResults[nextIndexInSearch];
+
+      // Find the index of nextItemInSearchResults in the items array
+      const nextIndexInItems = items.findIndex(
+        (item) => item.id === nextItemInSearchResults.id
+      );
+
+      // Set the currentIndex to the next index in items array
+      setCurrentIndex(nextIndexInItems);
     } else {
-      setCurrentIndex((prevIndex) => (prevIndex = 90));
+      // If searchResults is empty, simply increment the index
+      if (currentIndex !== 0) {
+        setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
+      } else {
+        setCurrentIndex((prevIndex) => (prevIndex = 90));
+      }
     }
   };
 
@@ -924,6 +957,7 @@ const TMCCard = () => {
     console.log(searchResults.length);
 
     setOptionsBoxText("Option");
+    !searchText && setIsVisible2(false);
 
     // !searchText && setOptionsBoxText("ALL");
   };
