@@ -1047,8 +1047,14 @@ const TMCCard = () => {
 
       <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen">
         <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none mb-[2.5vw] flex flex-row w-[85vw] md:w-[75vw] lg:w-[80vw]">
-          <div className="flex flex-row ml-[36%] md:ml-[39%] lg:ml-[43%] w-[100%] justify-between ">
-            <div className="underline underline-offset-4  ">TMC 311</div>
+          <div className="flex flex-row ml-[36%] md:ml-[39%] lg:ml-[43%] w-[100%] justify-between">
+            <div
+              className="underline underline-offset-4"
+              data-aos="zoom-out"
+              data-aos-duration="500"
+            >
+              TMC 311
+            </div>
             {/* Search input and button */}
             <div className="flex flex-row gap-[2vw] justify-between pl-[2vw]">
               {isVisible && (
@@ -1132,7 +1138,7 @@ const TMCCard = () => {
                 </div>
               )}
 
-              <div className="">
+              <div className="" data-aos="zoom-out" data-aos-duration="500">
                 <button className="h-[100%]" onClick={handleSearchButtonClick}>
                   <IoMdSearch
                     color="aquamarine"
@@ -1140,7 +1146,7 @@ const TMCCard = () => {
                   />
                 </button>
               </div>
-              <div className="">
+              <div className="" data-aos="zoom-out" data-aos-duration="500">
                 <button className="h-[100%]" onClick={handleFilterButtonClick}>
                   <RiFilter2Line
                     color="aquamarine"
@@ -1151,7 +1157,11 @@ const TMCCard = () => {
             </div>
           </div>
         </div>
-        <div className="mb-[5vw] bg-dark-grayish-blues w-[85vw] md:w-[75vw] lg:w-[80vw] mx-[7.5vw] md:mx-[12.5vw] rounded-[1.8vw] flex flex-col items-center justify-center px-[4vw] md:px-[2.8vw] lg:px-[2vw] pt-[6vw] md:pt-[19px] nxl:pt-[35px] text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[28px] xl:text-[37px] leading-snug lg:leading-normal nxl:leading-snug">
+        <div
+          className="mb-[5vw] bg-dark-grayish-blues w-[85vw] md:w-[75vw] lg:w-[80vw] mx-[7.5vw] md:mx-[12.5vw] rounded-[1.8vw] flex flex-col items-center justify-center px-[4vw] md:px-[2.8vw] lg:px-[2vw] pt-[6vw] md:pt-[19px] nxl:pt-[35px] text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[28px] xl:text-[37px] leading-snug lg:leading-normal nxl:leading-snug"
+          data-aos="zoom-in"
+          data-aos-duration="500"
+        >
           <div className="font-manrope mb-[6vw] md:mb-[18px] nxl:mb-[30px] xl:mb-[35px]  text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none">
             <div className="flex flex-row gap-[3vw] md:gap-[2.1vw] lg:gap-[1.5vw]">
               <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[21.5vw] md:w-[20.5vw] lg:w-[26.7vw] border-light-cyans"></div>
@@ -1171,7 +1181,7 @@ const TMCCard = () => {
             <div
               className="scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues overflow-y-auto max-h-[28.8vh] "
               data-aos="zoom-in"
-              data-aos-duration="700"
+              data-aos-duration="500"
             >
               <div>{items[currentIndex].quote}</div>
             </div>
@@ -1181,7 +1191,7 @@ const TMCCard = () => {
             <div
               className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-white text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:texts-[21px] nxl:text-[22px] xl:text-[25px]"
               data-aos="zoom-in"
-              data-aos-duration="700"
+              data-aos-duration="500"
             >
               <h2>Search Results:</h2>
               <ul className="list-decimal list-inside flex flex-col ">
@@ -1204,7 +1214,11 @@ const TMCCard = () => {
             </div>
           )}
 
-          <div className="flex self-end mr-[1.5vw] md:mr-[4.8vw] lg:mr-[3.3vw] hover:scale-[1.1] hover:mr-[4.8vw] hover:md:scale-[1.2] hover:md:mr-[5.8vw] hover:md:mr-[8.1vw] hover:lg:mr-[5.8vw] select-none">
+          <div
+            className="flex self-end mr-[1.5vw] md:mr-[4.8vw] lg:mr-[3.3vw] hover:scale-[1.1] hover:mr-[4.8vw] hover:md:scale-[1.2] hover:md:mr-[5.8vw] hover:md:mr-[8.1vw] hover:lg:mr-[5.8vw] select-none"
+            data-aos="zoom-in"
+            data-aos-duration="500"
+          >
             <div className="border-t-[0.2vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] w-[10vw] md:w-[7vw] lg:w-[5vw] border-neon-greens mr-[1.5vw] md:mr-[1vw]"></div>
             <div className="text-light-cyans text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] underline underline-offset-4 tracking-wider decoration-neon-greens/70">
               <a

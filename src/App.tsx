@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="">
+      <div className=" overflow-hidden">
         <TMCCard />
         <Analytics />
       </div>
