@@ -1052,7 +1052,7 @@ const TMCCard = () => {
             {/* Search input and button */}
             <div className="flex flex-row gap-[2vw] justify-between pl-[2vw]">
               {isVisible && (
-                <div className="">
+                <div className="" data-aos="zoom-in" data-aos-duration="700">
                   <input
                     id="signUp"
                     type="text"
@@ -1066,9 +1066,13 @@ const TMCCard = () => {
                 </div>
               )}
               {optionsIsVisible && (
-                <div className="relative text-left">
+                <div className="relative text-left ">
                   <div className="w-[100%]">
-                    <div className="">
+                    <div
+                      className=""
+                      data-aos="zoom-in"
+                      data-aos-duration="700"
+                    >
                       <button
                         onClick={handleOptionsButtonClick}
                         className="flex flex-row w-full items-center gap-x-1.5 rounded-md bg-white gap-[2vw] px-[1.2vw] py-[1.5vw] md:py-[0.8vw] lg:py-[0.4vw] xl:py-[0.8vw] nxl:px-3 nxl:py-2 nxl:text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 w-[100%] text-[2.8vw] md:text-[12px] lg:text-[14px] relative top-[0.4vw]"
@@ -1086,7 +1090,11 @@ const TMCCard = () => {
                     </div>
                   </div>{" "}
                   {optionsListIsVisible && (
-                    <div className="absolute right-0 z-10 mt-2.5 md:mt-[2.1vw] lg:mt-[1.8vw] min-w-[25vw] lg:min-w-[20vw] xl:min-w-[15vw] rounded-lg bg-white leading-snug nxl:leading-tight text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[26px] text-dark-grayish-blues z-30 shadow-2xl border-2 ">
+                    <div
+                      className="absolute right-0 z-10 mt-2.5 md:mt-[2.1vw] lg:mt-[1.8vw] min-w-[25vw] lg:min-w-[20vw] xl:min-w-[15vw] rounded-lg bg-white leading-snug nxl:leading-tight text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[26px] text-dark-grayish-blues z-30 shadow-2xl border-2 "
+                      data-aos="zoom-in"
+                      data-aos-duration="700"
+                    >
                       <div className="border-t2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
                         <button
                           onClick={handleAllButtonClick}
@@ -1160,13 +1168,21 @@ const TMCCard = () => {
           </div>
           {/* Display quotes/all results */}
           {(searchResults.length == 0 || isVisible2 == false) && (
-            <div className="scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues overflow-y-auto max-h-[28.8vh] ">
+            <div
+              className="scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw] text-light-cyans text-center selection:bg-light-cyans selection:text-dark-grayish-blues overflow-y-auto max-h-[28.8vh] "
+              data-aos="zoom-in"
+              data-aos-duration="700"
+            >
               <div>{items[currentIndex].quote}</div>
             </div>
           )}
           {/* Display search results */}
           {isVisible2 == true && searchResults.length !== 0 && (
-            <div className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-white text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:texts-[21px] nxl:text-[22px] xl:text-[25px]">
+            <div
+              className="border-2 absoluste overflow-x-hidden overflow-y-scroll w-full scroll rounded-md bg-white text-dark-grayish-blues z-20 scroll pr-[1vw] md:pr-[0.5vw] mb-[5vw] md:mb-[3.5vw] lg:mb-[2.5vw] tracking-[-0.2vw] md:tracking-[-0.04vw]  text-center selection:text-light-cyans selection:bg-dark-grayish-blues max-h-[28.8vh] text-[5.5vw] md:text-[17px] lg:texts-[21px] nxl:text-[22px] xl:text-[25px]"
+              data-aos="zoom-in"
+              data-aos-duration="700"
+            >
               <h2>Search Results:</h2>
               <ul className="list-decimal list-inside flex flex-col ">
                 {searchResults.map((result) => (
