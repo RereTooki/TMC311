@@ -1430,7 +1430,7 @@ const TMCCard = () => {
                       data-aos="zoom-in"
                       data-aos-duration="700"
                     >
-                      <div className="border-t2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                      <div className="border-t2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
                         <button
                           onClick={handleAllButtonClick}
                           className=" w-full"
@@ -1438,7 +1438,7 @@ const TMCCard = () => {
                           All
                         </button>
                       </div>
-                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                      <div className="border-t-2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
                         <button
                           onClick={handleBooksButtonClick}
                           className="w-full"
@@ -1446,7 +1446,7 @@ const TMCCard = () => {
                           Books
                         </button>
                       </div>
-                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                      <div className="border-t-2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
                         <button
                           onClick={handleQuotesButtonClick}
                           className=" w-full "
@@ -1454,7 +1454,7 @@ const TMCCard = () => {
                           Quotes
                         </button>
                       </div>
-                      <div className="border-t-2 hover:text-light-cyans hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans text-[4.8vw] md:text-[17px] lg:text-[19px] nxl:text-[24px] xl:text-[26px]">
+                      <div className="border-t-2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans text-[4.8vw] md:text-[17px] lg:text-[19px] nxl:text-[24px] xl:text-[26px]">
                         <button
                           onClick={handleScripturesButtonClick}
                           className="w-full "
