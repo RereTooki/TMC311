@@ -25,7 +25,7 @@ const TMCCard = () => {
       quote:
         "The aim of this course is to explore how a spiritual person - a child of God - can live in and make impact on the social and political context of the world.",
       author: "Dr. Lanre Amodu",
-      category: "Bible",
+      category: "Quote",
       url: "https://ng.linkedin.com/in/lanre-olaolu-amodu-959b3a17",
     },
     {
@@ -43,7 +43,7 @@ const TMCCard = () => {
       quote:
         "“God’s will and desire — His pleasure — is that we love Him. We cannot please God unless we love Him. We cannot love Him unless we know Him, and we cannot know Him unless we have faith in Him.”",
       author: "Myles Munroe",
-      category: "Bible",
+      category: "Quote",
       url: "https://www.google.com/search?q=myles+munroe&oq=MYLES&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBwgCEAAYjwIyBwgDEAAYjwIyBwgEEAAYjwLSAQgxNTM0ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8",
     },
     {
@@ -61,7 +61,7 @@ const TMCCard = () => {
       quote:
         "This world and its desires are in the process of passing away, but those who love to do the will of God live forever.",
       author: "1 John 2:15-17",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1849/1JN.2.17.TPT",
     },
     {
@@ -70,7 +70,7 @@ const TMCCard = () => {
       quote:
         "Whose end is destruction, whose God is their belly, and whose glory is in their shame, who mind earthly things.",
       author: "Philippians 3:19",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/PHP.3.19.KJV",
     },
     {
@@ -78,7 +78,7 @@ const TMCCard = () => {
       name: "Item 7",
       quote: "For none of us liveth to himself, and no man dieth to himself.",
       author: "Romans 14:7",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/rom.14.7",
     },
     {
@@ -87,7 +87,7 @@ const TMCCard = () => {
       quote:
         "Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind. This is the first and great commandment. And the second is like unto it, Thou shalt love thy neighbour as thyself. On these two commandments hang all the law and the prophets.",
       author: "Matthew 22:37-40",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/MAT.22.37-40.KJV",
     },
     {
@@ -96,7 +96,7 @@ const TMCCard = () => {
       quote:
         "But as it is written, Eye hath not seen, nor ear heard, Neither have entered into the heart of man, The things which God hath prepared for them that love him.",
       author: "1 Corinthians 2:9",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1CO.2.9.KJV",
     },
     {
@@ -105,7 +105,7 @@ const TMCCard = () => {
       quote:
         "But whoso hath this world's good, and seeth his brother have need, and shutteth up his bowels of compassion from him, how dwelleth the love of God in him? My little children, let us not love in word, neither in tongue; but in deed and in truth.",
       author: "1 John 3:17-18",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1JN.3.17-18.KJV",
     },
     {
@@ -113,7 +113,7 @@ const TMCCard = () => {
       name: "Item 11",
       quote: "Bear ye one another's burdens, and so fulfil the law of Christ.",
       author: "Galatians 6:2",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/GAL.6.2.KJV",
     },
     {
@@ -122,7 +122,7 @@ const TMCCard = () => {
       quote:
         "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
       author: "Galatians 6:9",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/GAL.6.9.KJV",
     },
     {
@@ -130,7 +130,7 @@ const TMCCard = () => {
       name: "Item 13",
       quote: "With good will doing service, as to the Lord, and not to men.",
       author: "Ephesians 6:7",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/EPH.6.7.KJV",
     },
     {
@@ -139,7 +139,7 @@ const TMCCard = () => {
       quote:
         "For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in: naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me. Then shall the righteous answer him, saying, Lord, when saw we thee an hungred, and fed thee? or thirsty, and gave thee drink? When saw we thee a stranger, and took thee in? or naked, and clothed thee? Or when saw we thee sick, or in prison, and came unto thee? And the King shall answer and say unto them, Verily I say unto you, Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me.",
       author: "Matthew 25:35-40",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/MAT.25.35-40.KJV",
     },
     {
@@ -148,7 +148,7 @@ const TMCCard = () => {
       quote:
         "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
       author: "Matthew 5:16",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/MAT.5.16.KJV",
     },
     {
@@ -157,7 +157,7 @@ const TMCCard = () => {
       quote:
         "Charge them that are rich in this world, that they be not highminded, nor trust in uncertain riches, but in the living God, who giveth us richly all things to enjoy; that they do good, that they be rich in good works, ready to distribute, willing to communicate.",
       author: "1 Timothy 6:17-18",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1TI.6.17-18.KJV",
     },
     {
@@ -166,7 +166,7 @@ const TMCCard = () => {
       quote:
         "I the LORD search the heart, I try the reins, even to give every man according to his ways, and according to the fruit of his doings.",
       author: "Jeremiah 17:10",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/JER.17.10.KJV",
     },
     {
@@ -175,7 +175,7 @@ const TMCCard = () => {
       quote:
         "Though I speak with the tongues of men and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal. And though I have the gift of prophecy, and understand all mysteries, and all knowledge; and though I have all faith, so that I could remove mountains, and have not charity, I am nothing. And though I bestow all my goods to feed the poor, and though I give my body to be burned, and have not charity, it profiteth me nothing.",
       author: "1 Corinthians 13:1-3",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1CO.13.1-3.KJV",
     },
     {
@@ -184,7 +184,7 @@ const TMCCard = () => {
       quote:
         "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
       author: "Ephesians 4:32",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/EPH.4.32.KJV",
     },
     {
@@ -193,7 +193,7 @@ const TMCCard = () => {
       quote:
         "And hope maketh not ashamed; because the love of God is shed abroad in our hearts by the Holy Ghost which is given unto us.",
       author: "Romans 5:5",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/ROM.5.5.KJV",
     },
     {
@@ -202,7 +202,7 @@ const TMCCard = () => {
       quote:
         "And this they did, not as we hoped, but first gave their own selves to the Lord, and unto us by the will of God.",
       author: "2 Corinthians 8:5",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/2CO.8.5.KJV",
     },
     {
@@ -211,7 +211,7 @@ const TMCCard = () => {
       quote:
         "Look not every man on his own things, but every man also on the things of others.",
       author: "Philippians 2:4",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/PHP.2.4.KJV",
     },
     {
@@ -220,7 +220,7 @@ const TMCCard = () => {
       quote:
         "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
       author: "Galatians 6:9",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/gal.6.9",
     },
     {
@@ -229,7 +229,7 @@ const TMCCard = () => {
       quote:
         "But if ye have respect to persons, ye commit sin, and are convinced of the law as transgressors.",
       author: "James 2:9",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/jas.2.9",
     },
     {
@@ -238,7 +238,7 @@ const TMCCard = () => {
       quote:
         "For God is not the author of confusion, but of peace, as in all churches of the saints.",
       author: "1 Corinthians 14:33a",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1co.14.33",
     },
     {
@@ -247,7 +247,7 @@ const TMCCard = () => {
       quote:
         "The way of the just is uprightness: thou, most upright, dost weigh the path of the just.",
       author: "Isaiah 26:7",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/isa.26.7",
     },
     {
@@ -256,7 +256,7 @@ const TMCCard = () => {
       quote:
         "My people are destroyed for lack of knowledge: because thou hast rejected knowledge, I will also reject thee, that thou shalt be no priest to me: seeing thou hast forgotten the law of thy God, I will also forget thy children.",
       author: "Hosea 4:6a",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/hos.4.6",
     },
     {
@@ -265,7 +265,7 @@ const TMCCard = () => {
       quote:
         "He that hath pity upon the poor lendeth unto the LORD; And that which he hath given will he pay him again.",
       author: "Proverbs 19:17",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/pro.19.17",
     },
     {
@@ -274,7 +274,7 @@ const TMCCard = () => {
       quote:
         "There shall be an handful of corn in the earth upon the top of the mountains; The fruit thereof shall shake like Lebanon: And they of the city shall flourish like grass of the earth.",
       author: "Psalm 72:16",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/psa.72.16",
     },
     {
@@ -283,7 +283,7 @@ const TMCCard = () => {
       quote:
         "Two are better than one; because they have a good reward for their labour.",
       author: "Ecclesiastes 4:9",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/ecc.4.9",
     },
     {
@@ -292,7 +292,7 @@ const TMCCard = () => {
       quote:
         "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work.",
       author: "2 Corinthians 9:8",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/2co.9.8",
     },
     {
@@ -301,7 +301,7 @@ const TMCCard = () => {
       quote:
         "Take fast hold of instruction; let her not go: Keep her; for she is thy life.",
       author: "Proverbs 4:13",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/pro.4.13",
     },
     {
@@ -310,7 +310,7 @@ const TMCCard = () => {
       quote:
         "Blessed is he that considereth the poor: The LORD will deliver him in time of trouble.",
       author: "Psalm 41:1",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/psa.41.1",
     },
     {
@@ -319,7 +319,7 @@ const TMCCard = () => {
       quote:
         "Then they cried unto the LORD in their trouble, And he delivered them out of their distresses. And he led them forth by the right way, that they might go to a city of habitation.",
       author: "Psalm 107:6-7",
-      category: "quote",
+      category: "Bible",
       url: "https://www.biblegateway.com/passage/?search=Psalm%20107%3A6-7&version=KJV",
     },
     {
@@ -327,7 +327,7 @@ const TMCCard = () => {
       name: "Item 35",
       quote: "Click the link",
       author: "Job 29:4-18",
-      category: "quote",
+      category: "Bible",
       url: "https://thekingjamesversionbible.com/job-29-4-18",
     },
     {
@@ -336,7 +336,7 @@ const TMCCard = () => {
       quote:
         "The LORD will preserve him, and keep him alive; and he shall be blessed upon the earth: And thou wilt not deliver him unto the will of his enemies.",
       author: "Psalm 41:2",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/psa.41.2",
     },
     {
@@ -345,7 +345,7 @@ const TMCCard = () => {
       quote:
         "Thou shalt arise, and have mercy upon Zion: for the time to favour her, yea, the set time, is come. For thy servants take pleasure in her stones, and favour the dust thereof. So the heathen shall fear the name of the Lord, and all the kings of the earth thy glory.",
       author: "Psalm 102:13-15",
-      category: "quote",
+      category: "Bible",
       url: "https://www.biblegateway.com/passage/?search=Psalm+102%3A13-15&version=KJV",
     },
     {
@@ -354,7 +354,7 @@ const TMCCard = () => {
       quote:
         "But we all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory, even as by the Spirit of the Lord.",
       author: "2 Cor. 3:18",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/2co.3.18",
     },
     {
@@ -363,7 +363,7 @@ const TMCCard = () => {
       quote:
         "I am the vine, ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
       author: "John 15:5",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/jhn.15.5",
     },
     {
@@ -372,7 +372,7 @@ const TMCCard = () => {
       quote:
         "Finally, be ye all of one mind, having compassion one of another, love as brethren, be pitiful, be courteous.",
       author: "1 Peter 3:8",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1pe.3.8",
     },
     {
@@ -381,7 +381,7 @@ const TMCCard = () => {
       quote:
         "Learn to do well; seek judgment, relieve the oppressed, judge the fatherless, plead for the widow.",
       author: "Isaiah 1:17",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/isa.1.17",
     },
     {
@@ -390,7 +390,7 @@ const TMCCard = () => {
       quote:
         "There shall be an handful of corn in the earth upon the top of the mountains; The fruit thereof shall shake like Lebanon: And they of the city shall flourish like grass of the earth.",
       author: "Psalm 72:16",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/psa.72.16",
     },
     {
@@ -399,7 +399,7 @@ const TMCCard = () => {
       quote:
         "As every man hath received the gift, even so minister the same one to another, as good stewards of the manifold grace of God.",
       author: "1 Peter 4:10",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1pe.4.10",
     },
     {
@@ -407,7 +407,7 @@ const TMCCard = () => {
       name: "Item 44",
       quote: "Even so faith, if it hath not works, is dead, being alone.",
       author: "James 2:17",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/jas.2.17",
     },
     {
@@ -416,7 +416,7 @@ const TMCCard = () => {
       quote:
         "“We make a living by what we get, but we make a life by what we give”",
       author: "Winston Churchill",
-      category: "quote",
+      category: "Quote",
       url: "https://hungryfaces.files.wordpress.com/2020/05/we-make-a-living-by-what-we-get.-we-make-a-life-by-what-we-give.-e1590431584229.png",
     },
     {
@@ -425,7 +425,7 @@ const TMCCard = () => {
       quote:
         "Who shall separate us from the love of Christ? shall tribulation, or distress, or persecution, or famine, or nakedness, or peril, or sword?",
       author: "Romans 8:35",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/rom.8.35",
     },
     {
@@ -434,7 +434,7 @@ const TMCCard = () => {
       quote:
         "And let us not be weary in well doing: for in due season we shall reap, if we faint not. As we have therefore opportunity, let us do good unto all men, especially unto them who are of the household of faith.",
       author: "Galatians 6:9-10",
-      category: "quote",
+      category: "Bible",
       url: "https://www.biblegateway.com/passage/?search=Galatians+6%3A9-10&version=KJV",
     },
     {
@@ -443,7 +443,7 @@ const TMCCard = () => {
       quote:
         "He that saith he is in the light, and hateth his brother, is in darkness even until now.",
       author: "1 John 2:9",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1jn.2.9",
     },
     {
@@ -452,7 +452,7 @@ const TMCCard = () => {
       quote:
         "If a man say, I love God, and hateth his brother, he is a liar: for he that loveth not his brother whom he hath seen, how can he love God whom he hath not seen?",
       author: "1 John 4:20",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/1jn.4.20",
     },
     {
@@ -460,7 +460,7 @@ const TMCCard = () => {
       name: "Item 50",
       quote: "Compassion: A Reflection on the Christian Life ",
       author: "By: Henri J.M. Nouwen",
-      category: "quote",
+      category: "Book",
       url: "https://justfaith.org/wp-content/uploads/2015/03/IMG_0536.jpg",
     },
     {
@@ -469,7 +469,7 @@ const TMCCard = () => {
       quote:
         "When Helping Hurts: How to Alleviate Poverty Without Hurting the Poor... and Yourself ",
       author: "By: Steve Corbett and Brian Fikkert",
-      category: "quote",
+      category: "Book",
       url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1328823049i/6595233.jpg",
     },
     {
@@ -478,7 +478,7 @@ const TMCCard = () => {
       quote:
         "The Power of Half: One Family's Decision to Stop Taking and Start Giving Back",
       author: "By: Kevin Salwen and Hannah Salwen",
-      category: "quote",
+      category: "Book",
       url: "https://pictures.abebooks.com/inventory/30376598361.jpg",
     },
     {
@@ -486,7 +486,7 @@ const TMCCard = () => {
       name: "Item 53",
       quote: "Understanding Financial Prosperity ",
       author: "By: Bishop David O. Oyedepo",
-      category: "quote",
+      category: "Book",
       url: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1577798497i/5697353.jpg",
     },
     {
@@ -494,7 +494,7 @@ const TMCCard = () => {
       name: "Item 54",
       quote: "Breaking Financial Hardship",
       author: "By: Bishop David O. Oyedepo",
-      category: "quote",
+      category: "Book",
       url: "https://m.media-amazon.com/images/I/71n7Se+jYkL._AC_UF1000,1000_QL80_.jpg",
     },
     {
@@ -502,7 +502,7 @@ const TMCCard = () => {
       name: "Item 55",
       quote: "The Hidden Covenants of Blessings",
       author: "By: Bishop David O. Oyedepo",
-      category: "quote",
+      category: "Book",
       url: "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/2486852/1.jpg?0284",
     },
     {
@@ -511,7 +511,7 @@ const TMCCard = () => {
       quote:
         "“The central task of citizenship is learning how to be 	good to one another and live peaceably with one another under the control of the rule of law”",
       author: "A.J. Patrick Liszkiewicz",
-      category: "quote",
+      category: "Quote",
       url: "https://www.google.com/search?q=A.J.+Patrick+Liszkiewicz&source=lmns&bih=610&biw=1280&hl=en-US&sa=X&ved=2ahUKEwiysLe2zNqCAxWqtCcCHeguDTsQ_AUoAHoECAEQAA",
     },
     {
@@ -520,7 +520,7 @@ const TMCCard = () => {
       quote:
         "“Citizenship is a collection of rights and obligations which gives an individual a formal legal identity”",
       author: "Turner, 2004",
-      category: "quote",
+      category: "Quote",
       url: "https://www.google.com/search?q=Citizenship+is+a+collection+of+rights+and+obligations+which+gives+an+individual+a+formal+legal+identity+Turner,+2004&source=lmns&bih=610&biw=1280&hl=en-US&sa=X&ved=2ahUKEwiUodTHzNqCAxWNlycCHVRBCeMQ_AUoAHoECAEQAA",
     },
     {
@@ -529,7 +529,7 @@ const TMCCard = () => {
       quote:
         "“Intelligence is not enough. Intelligence plus character, that is the goal of true education”",
       author: "Martin Luther King Jr",
-      category: "quote",
+      category: "Quote",
       url: "https://www.azquotes.com/quote/370661",
     },
     {
@@ -538,7 +538,7 @@ const TMCCard = () => {
       quote:
         "Everyone must submit to governing authorities. For all authority comes from God, and those in positions of authority have been placed there by God.",
       author: "Romans 13:1",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/ROM.13.1.KJV",
     },
     {
@@ -547,7 +547,7 @@ const TMCCard = () => {
       quote:
         "So you must submit to them, not only to avoid punishment, but also to keep a clear conscience. ",
       author: "Romans 13:5",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/rom.13.5",
     },
     {
@@ -556,7 +556,7 @@ const TMCCard = () => {
       quote:
         "Pay your taxes, too, for these same reasons. For government workers need to be paid. They are serving God in what they do",
       author: "Romans 13:6",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/rom.13.6",
     },
     {
@@ -565,7 +565,7 @@ const TMCCard = () => {
       quote:
         "“Owe nothing to anyone—except for your obligation to love one another. If you love your neighbor, you will fulfill the requirements of God’s law”",
       author: "Romans 13:8",
-      category: "quote",
+      category: "BibQuotele",
       url: "https://www.bible.com/bible/1/rom.13.8",
     },
     {
@@ -574,7 +574,7 @@ const TMCCard = () => {
       quote:
         "“Love does no wrong to others, so love fulfills the requirements of God’s law”",
       author: "Romans 13:10",
-      category: "quote",
+      category: "BibQuotele",
       url: "https://www.bible.com/bible/1/rom.13.10",
     },
     {
@@ -583,7 +583,7 @@ const TMCCard = () => {
       quote:
         "Because we belong to the day, we must live decent lives for all to see. Don’t participate in the darkness of wild parties and drunkenness, or in sexual promiscuity and immoral living, or in quarreling and jealousy.",
       author: "Romans 13:13",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/rom.13.13",
     },
     {
@@ -592,7 +592,7 @@ const TMCCard = () => {
       quote:
         "Always be humble and gentle. Be patient with each other, making allowance for each other’s faults because of your love. Make every effort to keep yourselves united in the Spirit, binding yourselves together with peace",
       author: "Ephesians 4:2-3",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/111/EPH.4.2-3.NIV",
     },
     {
@@ -601,7 +601,7 @@ const TMCCard = () => {
       quote:
         "“No one lights a lamp and then puts it under a basket. Instead, a lamp is placed on a stand, where it gives light to everyone in the house. E.g. Volunteer for community service, help the needy & the poor. In the same way, let your good deeds shine out for all to see, so that everyone will praise your heavenly Father”",
       author: "Matthew 5:15-16",
-      category: "quote",
+      category: "BibQuotele",
       url: "https://www.biblegateway.com/passage/?search=Matthew%205%3A15-16&version=NIV",
     },
     {
@@ -609,7 +609,7 @@ const TMCCard = () => {
       name: "Item 67",
       quote: "Pray for peace in Jerusalem. May all who love this city prosper.",
       author: "Psalm 122:6",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/PSA.122.6.KJV",
     },
     {
@@ -618,7 +618,7 @@ const TMCCard = () => {
       quote:
         "For just as each of us has one body with many members, and these members do not all have the same function, so in Christ we, though many, form one body, and each member belongs to all the others.",
       author: "Romans 12:4–5",
-      category: "quote",
+      category: "Bible",
       url: "https://www.biblegateway.com/passage/?search=Romans+12%3A4%E2%80%935&version=NIV",
     },
     {
@@ -626,7 +626,7 @@ const TMCCard = () => {
       name: "Item 69",
       quote: "Click the link",
       author: "Ecclesiastes 4:9-12 NIV",
-      category: "quote",
+      category: "Bible",
       url: "https://www.biblegateway.com/passage/?search=Ecclesiastes+4%3A9-12+&version=NIV",
     },
     {
@@ -634,7 +634,7 @@ const TMCCard = () => {
       name: "Item 70",
       quote: "Can two walk together except they agree?’",
       author: "Amos 3:3",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/amo.3.3",
     },
     {
@@ -643,7 +643,7 @@ const TMCCard = () => {
       quote:
         "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”",
       author: "Maya Angelou",
-      category: "quote",
+      category: "Quote",
       url: "https://www.goodreads.com/quotes/5934-i-ve-learned-that-people-will-forget-what-you-said-people",
     },
     {
@@ -652,7 +652,7 @@ const TMCCard = () => {
       quote:
         "Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift.",
       author: "Matthew 5:24",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/mat.5.24",
     },
     {
@@ -661,7 +661,7 @@ const TMCCard = () => {
       quote:
         "Blessed are the peacemakers: for they shall be called the children of God.",
       author: "Matthew 5:9",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/mat.5.9",
     },
     {
@@ -669,7 +669,7 @@ const TMCCard = () => {
       name: "Item 74",
       quote: "“Life is not a funfair; it is a warfare”",
       author: "Bishop David Oyedepo",
-      category: "quote",
+      category: "Quote",
       url: "https://www.goodreads.com/quotes/447963-life-is-not-a-funfair-life-is-a-warfare",
     },
     {
@@ -678,7 +678,7 @@ const TMCCard = () => {
       quote:
         "For thus saith the LORD that created the heavens; God himself that formed the earth and made it; he hath established it, he created it not in vain, he formed it to be inhabited: I am the LORD; and there is none else.",
       author: "Isaiah 45:18 (KJV)",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/ISA.45.18.KJV",
     },
     {
@@ -687,7 +687,7 @@ const TMCCard = () => {
       quote:
         "“There is no mountain anywhere; everybody's mountain is his ignorance”",
       author: "Bishop David Oyedepo",
-      category: "quote",
+      category: "Quote",
       url: "https://www.azquotes.com/quote/1383945",
     },
     {
@@ -696,7 +696,7 @@ const TMCCard = () => {
       quote:
         "But as truly as I live, all the earth shall be filled with the glory of the LORD.",
       author: "Numbers 14:21 (KJV)",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/num.14.21",
     },
     {
@@ -705,7 +705,7 @@ const TMCCard = () => {
       quote:
         "For the earth shall be filled with the knowledge of the glory of the LORD, as the waters cover the sea.",
       author: "Habakkuk 2:14 (KJV)",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/hab.2.14",
     },
     {
@@ -714,7 +714,7 @@ const TMCCard = () => {
       quote:
         "“Knowing what God has promised is information, but knowing what to do to actualize it is revelation.”",
       author: "Bishop David Oyedepo",
-      category: "quote",
+      category: "Quote",
       url: "https://thegospel.ng/quote-of-the-day-10th-march-2021/",
     },
     {
@@ -722,7 +722,7 @@ const TMCCard = () => {
       name: "Item 80",
       quote: "And he said, I beseech thee, shew me thy glory.",
       author: "Exodus 33:18 (KJV)",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/exo.33.18",
     },
     {
@@ -730,7 +730,7 @@ const TMCCard = () => {
       name: "Item 81",
       quote: "“Nothing finishes until you finish it with your mouth”",
       author: "Bishop David Oyedepo",
-      category: "quote",
+      category: "Quote",
       url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bis&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyBggCEEUYOzIGCAMQRRg7MgcIBBAAGI8CMgcIBRAAGI8CMgcIBhAAGI8CMgYIBxBFGDzSAQgyNTY2ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8",
     },
     {
@@ -739,7 +739,7 @@ const TMCCard = () => {
       quote:
         "And the LORD passed by before him, and proclaimed, The LORD, The LORD God, merciful and gracious, longsuffering, and abundant in goodness and truth.",
       author: "Exodus 34:6 (KJV)",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/exo.34.6",
     },
     {
@@ -747,7 +747,7 @@ const TMCCard = () => {
       name: "Item 83",
       quote: "“You are either spiritual or carnal; you cannot be neutral.”",
       author: "Bishop David Oyedepo",
-      category: "quote",
+      category: "Quote",
       url: "https://quotefancy.com/quote/2921920/David-O-Oyedepo-You-are-either-spiritual-or-carnal-you-cannot-be-neutral",
     },
     {
@@ -755,7 +755,7 @@ const TMCCard = () => {
       name: "Item 84",
       quote: "Understanding Divine Direction",
       author: "By: Bishop David Oyedepo",
-      category: "quote",
+      category: "Book",
       url: "https://winnerschapelcalgarydbs.org/understanding-divine-direction/",
     },
     {
@@ -763,7 +763,7 @@ const TMCCard = () => {
       name: "Item 85",
       quote: "In Pursuit of Vision",
       author: "By: Bishop David Oyedepo",
-      category: "quote",
+      category: "Book",
       url: "https://winnerschapelcalgarydbs.org/in-pursuit-of-vision/",
     },
     {
@@ -771,7 +771,7 @@ const TMCCard = () => {
       name: "Item 86",
       quote: "Understanding Vision",
       author: "By: Bishop David Oyedepo",
-      category: "quote",
+      category: "Book",
       url: "https://winnerschapelcalgarydbs.org/understanding-vision/",
     },
     {
@@ -779,7 +779,7 @@ const TMCCard = () => {
       name: "Item 87",
       quote: "Message on Understanding God’s Plan For Me From His Book",
       author: "By: Bishop David Oyedepo",
-      category: "quote",
+      category: "Book",
       url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgzMDc1ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
     },
     {
@@ -787,7 +787,7 @@ const TMCCard = () => {
       name: "Item 88",
       quote: "“Until you begin to work, nothing works.”",
       author: "Bishop David Oyedepo",
-      category: "quote",
+      category: "Quote",
       url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
     },
     {
@@ -796,7 +796,7 @@ const TMCCard = () => {
       quote:
         "Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling.",
       author: "Philippians 2:12 (KJV)",
-      category: "quote",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/php.2.12",
     },
     {
@@ -804,7 +804,7 @@ const TMCCard = () => {
       name: "Item 90",
       quote: "“A glorious result demands a serious approach”",
       author: "Bishop David Oyedepo",
-      category: "quote",
+      category: "Quote",
       url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
     },
     {
@@ -812,7 +812,7 @@ const TMCCard = () => {
       name: "Item 91",
       quote: "Thank You!",
       author: "Rerel'Oluwa Tooki",
-      category: "quote",
+      category: "Quote",
       url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
     },
   ]);
@@ -1251,7 +1251,7 @@ const TMCCard = () => {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-0 left-0 ml-[2vw] pb-[1.2vw] text-light-cyans underline-offset-4 md:pb-[1.2vw] text-[2vw] nsm:text-[1.2vw] xl:text-[1vw] select-none">
+        <div className="fixed bottom-0 left-0 ml-[2vw] pb-[1.2vw] text-light-cyans underline-offset-2 nxl:underline-offset-4 md:pb-[1.2vw] text-[2vw] nsm:text-[1.2vw] xl:text-[1vw] select-none">
           © 2023{" "}
           <a
             href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
