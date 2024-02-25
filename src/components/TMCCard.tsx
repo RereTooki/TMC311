@@ -565,7 +565,7 @@ const TMCCard = () => {
       quote:
         "“Owe nothing to anyone—except for your obligation to love one another. If you love your neighbor, you will fulfill the requirements of God’s law”",
       author: "Romans 13:8",
-      category: "BibQuotele",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/rom.13.8",
     },
     {
@@ -574,7 +574,7 @@ const TMCCard = () => {
       quote:
         "“Love does no wrong to others, so love fulfills the requirements of God’s law”",
       author: "Romans 13:10",
-      category: "BibQuotele",
+      category: "Bible",
       url: "https://www.bible.com/bible/1/rom.13.10",
     },
     {
@@ -601,7 +601,7 @@ const TMCCard = () => {
       quote:
         "“No one lights a lamp and then puts it under a basket. Instead, a lamp is placed on a stand, where it gives light to everyone in the house. E.g. Volunteer for community service, help the needy & the poor. In the same way, let your good deeds shine out for all to see, so that everyone will praise your heavenly Father”",
       author: "Matthew 5:15-16",
-      category: "BibQuotele",
+      category: "Bible",
       url: "https://www.biblegateway.com/passage/?search=Matthew%205%3A15-16&version=NIV",
     },
     {
@@ -962,17 +962,13 @@ const TMCCard = () => {
     // !searchText && setOptionsBoxText("ALL");
   };
 
-  // Function to handle the list button click. it also acts as a clear search button
+  // Function to handle the list button click. It also acts as a clear search button
   const handleListButtonClick = (id: number) => {
     setCurrentIndex(id - 1);
     setIsVisible2(false);
-
-    // setSearchgText("");
-    // setIsVisdible(false);
-    // setIsVisible2(false);
-    // setSearchgResults([]);
   };
 
+  // Function to handle the filter button click. Displays the option button
   const handleFilterButtonClick = () => {
     console.log("filter button");
     isVisible && setIsVisible(false);
@@ -988,7 +984,7 @@ const TMCCard = () => {
       : setOptionsListIsVisible(false);
   };
 
-  // Function to handle the options button click. Displays everything.
+  // Function to handle the All button click. Displays everything.
   const handleAllButtonClick = () => {
     console.log("ALL button");
     setOptionsListIsVisible(false);
@@ -999,32 +995,32 @@ const TMCCard = () => {
     setIsVisible2(true);
   };
 
-  // Function to handle the options button click. Displays all the books.
+  // Function to handle the books button click. Displays all the books.
   const handleBooksButtonClick = () => {
     console.log("Books button");
     setOptionsListIsVisible(false);
-    const bookResults = items.filter((item) => item.author.includes("By: "));
+    const bookResults = items.filter((item) => item.category === "Book");
     setSearchResults(bookResults);
     setOptionsBoxText("Book");
     setIsVisible2(true);
   };
 
-  // Function to handle the options button click. Displays all the quotes.
+  // Function to handle the quotes button click. Displays all the quotes.
   const handleQuotesButtonClick = () => {
     console.log("Quotes button");
     setOptionsListIsVisible(false);
-    const quoteResults = items.filter((item) => item.quote.includes("“"));
+    const quoteResults = items.filter((item) => item.category === "Quote");
     setSearchResults(quoteResults);
     setOptionsBoxText("Quote");
     setIsVisible2(true);
   };
 
-  // Function to handle the options button click. Displays all the scriptures.
+  // Function to handle the scriptures button click. Displays all the scriptures.
   const handleScripturesButtonClick = () => {
     console.log("Scriptures button");
     setOptionsListIsVisible(false);
     setOptionsBoxText("Scripture");
-    const scriptureResults = items.filter((item) => item.quote.includes(":"));
+    const scriptureResults = items.filter((item) => item.category === "Bible");
     setSearchResults(scriptureResults);
     setIsVisible2(true);
     //     const scriptureResults = items.filter((item) => item.category === "Bible");
