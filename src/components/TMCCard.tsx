@@ -1,12 +1,14 @@
 import React, { useRef } from "react";
 import "../App.css";
 import { useState, useEffect } from "react";
-import { MdSkipPrevious } from "react-icons/md";
+import { MdOutlineQuestionAnswer, MdSkipPrevious } from "react-icons/md";
 import { MdSkipNext } from "react-icons/md";
 import { IoMdSearch } from "react-icons/io";
 import { RiFilter2Line } from "react-icons/ri";
-
 import { FaChevronDown } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+import AlertModal from "./AlertModal";
+import { Switch } from "@headlessui/react";
 
 type Item = {
   id: number;
@@ -19,6 +21,14 @@ type Item = {
 
 const TMCCard = () => {
   const [items, setItems] = useState<Item[]>([
+    {
+      id: 0,
+      name: "Item 0",
+      quote: "“Welcome to the TMC 311 study hub!”",
+      author: "Rerel'Oluwa Tooki",
+      category: "Quote",
+      url: "https://www.linkedin.com/in/rerel-oluwa-tooki-cnvp-b53396253/",
+    },
     {
       id: 1,
       name: "Item 1",
@@ -532,182 +542,185 @@ const TMCCard = () => {
       category: "Quote",
       url: "https://www.azquotes.com/quote/370661",
     },
+
     {
       id: 59,
       name: "Item 59",
       quote:
-        "Everyone must submit to governing authorities. For all authority comes from God, and those in positions of authority have been placed there by God.",
-      author: "Romans 13:1",
+        "I do not pray that You should take them out of the world, but that You should keep them from the evil one.",
+      author: "John 17:15",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/ROM.13.1.KJV",
+      url: "https://www.biblegateway.com/passage/?search=John+17%3A15&version=NKJV",
     },
     {
       id: 60,
       name: "Item 60",
-      quote:
-        "So you must submit to them, not only to avoid punishment, but also to keep a clear conscience. ",
-      author: "Romans 13:5",
+      quote: "My son, give me your heart, and let your eyes observe my ways.",
+      author: "Proverbs 23:26",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.5",
+      url: "https://www.biblegateway.com/passage/?search=Proverbs+23%3A26&version=KJV",
     },
     {
       id: 61,
       name: "Item 61",
       quote:
-        "Pay your taxes, too, for these same reasons. For government workers need to be paid. They are serving God in what they do",
-      author: "Romans 13:6",
+        "I beseech you therefore, brethren, by the mercies of God, that you present your bodies a living sacrifice, holy, acceptable to God, which is your reasonable service.",
+      author: "Romans 12:1",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.6",
+      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A1&version=KJV",
     },
     {
       id: 62,
       name: "Item 62",
       quote:
-        "“Owe nothing to anyone—except for your obligation to love one another. If you love your neighbor, you will fulfill the requirements of God’s law”",
-      author: "Romans 13:8",
+        "He that hath no rule over his own spirit is like a city that is broken down, and without walls.",
+      author: "Proverbs 25:28",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.8",
+      url: "https://www.biblegateway.com/passage/?search=Proverbs+25%3A28&version=KJV",
     },
     {
       id: 63,
       name: "Item 63",
       quote:
-        "“Love does no wrong to others, so love fulfills the requirements of God’s law”",
-      author: "Romans 13:10",
+        "I call heaven and earth to record this day against you, that I have set before you life and death, blessing and cursing: therefore choose life, that both thou and thy seed may live.",
+      author: "Deuteronomy 30:19",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.10",
+      url: "https://www.biblegateway.com/passage/?search=Deuteronomy+30%3A19&version=KJV",
     },
     {
       id: 64,
       name: "Item 64",
       quote:
-        "Because we belong to the day, we must live decent lives for all to see. Don’t participate in the darkness of wild parties and drunkenness, or in sexual promiscuity and immoral living, or in quarreling and jealousy.",
-      author: "Romans 13:13",
+        "Therefore all things whatsoever ye would that men should do to you: do ye even so to them: for this is the law and the prophets.",
+      author: "Matthew 7:12",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.13",
+      url: "https://www.biblegateway.com/passage/?search=Matthew+7%3A12&version=KJV",
     },
     {
       id: 65,
       name: "Item 65",
       quote:
-        "Always be humble and gentle. Be patient with each other, making allowance for each other’s faults because of your love. Make every effort to keep yourselves united in the Spirit, binding yourselves together with peace",
-      author: "Ephesians 4:2-3",
+        "Let no man despise thy youth; but be thou an example of the believers, in word, in conversation, in charity, in spirit, in faith, in purity.",
+      author: "1 Timothy 4:12",
       category: "Bible",
-      url: "https://www.bible.com/bible/111/EPH.4.2-3.NIV",
+      url: "https://www.biblegateway.com/passage/?search=1+Timothy+4%3A12&version=KJV",
     },
     {
       id: 66,
       name: "Item 66",
       quote:
-        "“No one lights a lamp and then puts it under a basket. Instead, a lamp is placed on a stand, where it gives light to everyone in the house. E.g. Volunteer for community service, help the needy & the poor. In the same way, let your good deeds shine out for all to see, so that everyone will praise your heavenly Father”",
-      author: "Matthew 5:15-16",
+        "Be of good courage, and he shall strengthen your heart, all ye that hope in the LORD.",
+      author: "Psalm 31:24",
       category: "Bible",
-      url: "https://www.biblegateway.com/passage/?search=Matthew%205%3A15-16&version=NIV",
+      url: "https://www.biblegateway.com/passage/?search=Psalm+31%3A24&version=KJV",
     },
     {
       id: 67,
       name: "Item 67",
-      quote: "Pray for peace in Jerusalem. May all who love this city prosper.",
-      author: "Psalm 122:6",
+      quote:
+        "The integrity of the upright shall guide them but the perverseness of transgressors shall destroy them.",
+      author: "Proverbs 11:3",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/PSA.122.6.KJV",
+      url: "https://www.biblegateway.com/passage/?search=Proverbs+11%3A3&version=KJV",
     },
     {
       id: 68,
       name: "Item 68",
       quote:
-        "For just as each of us has one body with many members, and these members do not all have the same function, so in Christ we, though many, form one body, and each member belongs to all the others.",
-      author: "Romans 12:4–5",
+        "Every person is to be in subjection to the governing authorities. For there is no authority except from God, and those which exist are established by God.",
+      author: "Romans 13:1",
       category: "Bible",
-      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A4%E2%80%935&version=NIV",
+      url: "https://www.biblegateway.com/passage/?search=Romans+13%3A1&version=NASB",
     },
     {
       id: 69,
       name: "Item 69",
-      quote: "Click the link",
-      author: "Ecclesiastes 4:9-12 NIV",
+      quote:
+        "And if ye have not been faithful in that which is another man's, who shall give you that which is your own?",
+      author: "Luke 16:12",
       category: "Bible",
-      url: "https://www.biblegateway.com/passage/?search=Ecclesiastes+4%3A9-12+&version=NIV",
+      url: "https://www.biblegateway.com/passage/?search=Luke+16%3A12&version=KJV",
     },
     {
       id: 70,
       name: "Item 70",
-      quote: "Can two walk together except they agree?’",
-      author: "Amos 3:3",
+      quote:
+        "And whatsoever ye do in word or deed, do all in the name of the Lord Jesus, giving thanks to God and the Father by him.",
+      author: "Colossians 3:17",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/amo.3.3",
+      url: "https://www.biblegateway.com/passage/?search=Colossians+3%3A17&version=KJV",
     },
     {
       id: 71,
       name: "Item 71",
       quote:
-        "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”",
-      author: "Maya Angelou",
-      category: "Quote",
-      url: "https://www.goodreads.com/quotes/5934-i-ve-learned-that-people-will-forget-what-you-said-people",
+        "Wisdom is the principal thing; therefore get wisdom: and with all thy getting get understanding.",
+      author: "Proverbs 4:7",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=Proverbs+4%3A7&version=KJV",
     },
     {
       id: 72,
       name: "Item 72",
       quote:
-        "Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift.",
-      author: "Matthew 5:24",
+        "The LORD examines the righteous, but the wicked, those who love violence, he hates with a passion.",
+      author: "Psalm 11:5",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/mat.5.24",
+      url: "https://www.biblegateway.com/passage/?search=Psalm+11%3A5&version=NIV",
     },
     {
       id: 73,
       name: "Item 73",
-      quote:
-        "Blessed are the peacemakers: for they shall be called the children of God.",
-      author: "Matthew 5:9",
+      quote: "For every man shall bear his own burden.",
+      author: "Galatians 6:5",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/mat.5.9",
+      url: "https://www.biblegateway.com/passage/?search=Galatians+6%3A5&version=KJV",
     },
     {
       id: 74,
       name: "Item 74",
-      quote: "“Life is not a funfair; it is a warfare”",
-      author: "Bishop David Oyedepo",
+      quote:
+        "“Research has shown that poor integration to societal moral and social values among people is the bane of bad citizenship.”",
+      author: "Jimoh, 2016; Ogunyemi, 2011",
       category: "Quote",
-      url: "https://www.goodreads.com/quotes/447963-life-is-not-a-funfair-life-is-a-warfare",
+      url: "https://www.google.com/search?q=Research+has+shown+that+poor+integration+to+societal+moral+and+social+values+among+people+is+the+bane+of+bad+citizenship.+Jimoh%2C+2016%3B+Ogunyemi%2C+2011.&oq=Research+has+shown+that+poor+integration+to+societal+moral+and+social+values+among+people+is+the+bane+of+bad+citizenship.+Jimoh%2C+2016%3B+Ogunyemi%2C+2011.+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEyMzgyajBqMagCALACAA&sourceid=chrome&ie=UTF-8",
     },
     {
       id: 75,
       name: "Item 75",
       quote:
-        "For thus saith the LORD that created the heavens; God himself that formed the earth and made it; he hath established it, he created it not in vain, he formed it to be inhabited: I am the LORD; and there is none else.",
-      author: "Isaiah 45:18 (KJV)",
+        "“Pursue peace with all people, and holiness, without which no one will see the Lord.”",
+      author: "Hebrews 12:14",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/ISA.45.18.KJV",
+      url: "https://www.biblegateway.com/passage/?search=Hebrews+12%3A14&version=NKJV",
     },
     {
       id: 76,
       name: "Item 76",
       quote:
-        "“There is no mountain anywhere; everybody's mountain is his ignorance”",
-      author: "Bishop David Oyedepo",
-      category: "Quote",
-      url: "https://www.azquotes.com/quote/1383945",
+        "“Therefore, we conclude that a man is justified by faith apart from the deeds of the law.”",
+      author: "Romans 4:28",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=Romans+4%3A28&version=NKJV",
     },
     {
       id: 77,
       name: "Item 77",
       quote:
-        "But as truly as I live, all the earth shall be filled with the glory of the LORD.",
-      author: "Numbers 14:21 (KJV)",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/num.14.21",
+        "“You are absolutely responsible for the outcome of your life. You can't blame anyone, not even the devil.”",
+      author: "Bishop David Oyedepo",
+      category: "Quote",
+      url: "https://www.google.com/search?q=Bishop+David+Oyedepo&oq=Bish&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBwgCEAAYjwIyBwgDEAAYjwIyBwgEEAAYjwLSAQc4MDJqMGo5qAIAsAIB&sourceid=chrome&ie=UTF-8",
     },
     {
       id: 78,
       name: "Item 78",
-      quote:
-        "For the earth shall be filled with the knowledge of the glory of the LORD, as the waters cover the sea.",
-      author: "Habakkuk 2:14 (KJV)",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/hab.2.14",
+      quote: "“Life is not a funfair; it is a warfare”",
+      author: "Bishop David Oyedepo",
+      category: "Quote",
+      url: "https://www.goodreads.com/quotes/447963-life-is-not-a-funfair-life-is-a-warfare",
     },
+
     {
       id: 79,
       name: "Item 79",
@@ -794,44 +807,49 @@ const TMCCard = () => {
       id: 89,
       name: "Item 89",
       quote:
-        "Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling.",
-      author: "Philippians 2:12 (KJV)",
+        "For thus saith the LORD that created the heavens; God himself that formed the earth and made it; he hath established it, he created it not in vain, he formed it to be inhabited: I am the LORD; and there is none else.",
+      author: "Isaiah 45:18 (KJV)",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/php.2.12",
+      url: "https://www.bible.com/bible/1/ISA.45.18.KJV",
     },
+
     {
       id: 90,
       name: "Item 90",
-      quote: "“A glorious result demands a serious approach”",
+      quote:
+        "“There is no mountain anywhere; everybody's mountain is his ignorance”",
       author: "Bishop David Oyedepo",
       category: "Quote",
-      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
+      url: "https://www.azquotes.com/quote/1383945",
     },
     {
       id: 91,
       name: "Item 91",
       quote:
-        "“God has a place prepared for you in life. A discovery of it is what is called vision.”",
-      author: "Bishop David Oyedepo",
-      category: "Quote",
-      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
+        "But as truly as I live, all the earth shall be filled with the glory of the LORD.",
+      author: "Numbers 14:21 (KJV)",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/num.14.21",
     },
     {
       id: 92,
       name: "Item 92",
-      quote: "“Diversity in all its forms is the path to greatness.”",
-      author: "James D. Wilson",
-      category: "Quote",
-      url: "https://www.goodreads.com/quotes/10095779-diversity-in-all-its-forms-is-the-path-to-greatness",
+      quote:
+        "For the earth shall be filled with the knowledge of the glory of the LORD, as the waters cover the sea.",
+      author: "Habakkuk 2:14 (KJV)",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/hab.2.14",
     },
     {
       id: 93,
       name: "Item 93",
-      quote: "“Strength lies in differences, not in similarities.”",
-      author: "Stephen R. Covey",
+      quote:
+        "“This is where the notes for the 24/25 session stop on moodle. From here down is 23/24 notes. Feel free to go on.”",
+      author: "Rerel'Oluwa Tooki",
       category: "Quote",
-      url: "https://www.goodreads.com/quotes/68074-strength-lies-in-differences-not-in-similarities",
+      url: "https://www.linkedin.com/in/rerel-oluwa-tooki-cnvp-b53396253/",
     },
+
     {
       id: 94,
       name: "Item 94",
@@ -1140,15 +1158,239 @@ const TMCCard = () => {
       category: "Book",
       url: "https://www.google.com/search?q=Packer%2C+D.+(2016)+%E2%80%9CConscious+Politics%E2%80%9D.+A+TEDTalk+Recording.&oq=Packer%2C+D.+(2016)+%E2%80%9CConscious+Politics%E2%80%9D.+A+TEDTalk+Recording.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDEzMjhqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8",
     },
+
     {
       id: 130,
       name: "Item 130",
+      quote: "“A glorious result demands a serious approach”",
+      author: "Bishop David Oyedepo",
+      category: "Quote",
+      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
+    },
+    {
+      id: 131,
+      name: "Item 131",
+      quote:
+        "“God has a place prepared for you in life. A discovery of it is what is called vision.”",
+      author: "Bishop David Oyedepo",
+      category: "Quote",
+      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
+    },
+    {
+      id: 132,
+      name: "Item 132",
+      quote: "“Diversity in all its forms is the path to greatness.”",
+      author: "James D. Wilson",
+      category: "Quote",
+      url: "https://www.goodreads.com/quotes/10095779-diversity-in-all-its-forms-is-the-path-to-greatness",
+    },
+    {
+      id: 133,
+      name: "Item 133",
+      quote: "“Strength lies in differences, not in similarities.”",
+      author: "Stephen R. Covey",
+      category: "Quote",
+      url: "https://www.goodreads.com/quotes/68074-strength-lies-in-differences-not-in-similarities",
+    },
+
+    {
+      id: 134,
+      name: "Item 134",
+      quote:
+        "Everyone must submit to governing authorities. For all authority comes from God, and those in positions of authority have been placed there by God.",
+      author: "Romans 13:1",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/ROM.13.1.KJV",
+    },
+    {
+      id: 135,
+      name: "Item 135",
+      quote:
+        "So you must submit to them, not only to avoid punishment, but also to keep a clear conscience. ",
+      author: "Romans 13:5",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/rom.13.5",
+    },
+
+    {
+      id: 136,
+      name: "Item 136",
+      quote:
+        "“No one lights a lamp and then puts it under a basket. Instead, a lamp is placed on a stand, where it gives light to everyone in the house. E.g. Volunteer for community service, help the needy & the poor. In the same way, let your good deeds shine out for all to see, so that everyone will praise your heavenly Father”",
+      author: "Matthew 5:15-16",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=Matthew%205%3A15-16&version=NIV",
+    },
+    {
+      id: 137,
+      name: "Item 137",
+      quote: "Pray for peace in Jerusalem. May all who love this city prosper.",
+      author: "Psalm 122:6",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/PSA.122.6.KJV",
+    },
+    {
+      id: 138,
+      name: "Item 138",
+      quote:
+        "For just as each of us has one body with many members, and these members do not all have the same function, so in Christ we, though many, form one body, and each member belongs to all the others.",
+      author: "Romans 12:4–5",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A4%E2%80%935&version=NIV",
+    },
+    {
+      id: 139,
+      name: "Item 139",
+      quote: "Click the link",
+      author: "Ecclesiastes 4:9-12 NIV",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=Ecclesiastes+4%3A9-12+&version=NIV",
+    },
+    {
+      id: 140,
+      name: "Item 140",
+      quote: "Can two walk together except they agree?’",
+      author: "Amos 3:3",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/amo.3.3",
+    },
+    {
+      id: 141,
+      name: "Item 141",
+      quote:
+        "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”",
+      author: "Maya Angelou",
+      category: "Quote",
+      url: "https://www.goodreads.com/quotes/5934-i-ve-learned-that-people-will-forget-what-you-said-people",
+    },
+    {
+      id: 142,
+      name: "Item 142",
+      quote:
+        "Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift.",
+      author: "Matthew 5:24",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/mat.5.24",
+    },
+    {
+      id: 143,
+      name: "Item 143",
+      quote:
+        "Blessed are the peacemakers: for they shall be called the children of God.",
+      author: "Matthew 5:9",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/mat.5.9",
+    },
+
+    {
+      id: 144,
+      name: "Item 144",
+      quote:
+        "Pay your taxes, too, for these same reasons. For government workers need to be paid. They are serving God in what they do",
+      author: "Romans 13:6",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/rom.13.6",
+    },
+    {
+      id: 145,
+      name: "Item 145",
+      quote:
+        "“Owe nothing to anyone—except for your obligation to love one another. If you love your neighbor, you will fulfill the requirements of God’s law”",
+      author: "Romans 13:8",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/rom.13.8",
+    },
+    {
+      id: 146,
+      name: "Item 146",
+      quote:
+        "“Love does no wrong to others, so love fulfills the requirements of God’s law”",
+      author: "Romans 13:10",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/rom.13.10",
+    },
+    {
+      id: 147,
+      name: "Item 147",
+      quote:
+        "Because we belong to the day, we must live decent lives for all to see. Don’t participate in the darkness of wild parties and drunkenness, or in sexual promiscuity and immoral living, or in quarreling and jealousy.",
+      author: "Romans 13:13",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/rom.13.13",
+    },
+    {
+      id: 148,
+      name: "Item 148",
+      quote:
+        "Always be humble and gentle. Be patient with each other, making allowance for each other’s faults because of your love. Make every effort to keep yourselves united in the Spirit, binding yourselves together with peace",
+      author: "Ephesians 4:2-3",
+      category: "Bible",
+      url: "https://www.bible.com/bible/111/EPH.4.2-3.NIV",
+    },
+    {
+      id: 149,
+      name: "Item 149",
+      quote:
+        "Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling.",
+      author: "Philippians 2:12 (KJV)",
+      category: "Bible",
+      url: "https://www.bible.com/bible/1/php.2.12",
+    },
+    {
+      id: 150,
+      name: "Item 150",
       quote: "Thank You!",
       author: "Rerel'Oluwa Tooki",
       category: "Quote",
-      url: "https://linkedin.com/in/rerel-oluwa-tooki-b53396253/",
+      url: "https://www.linkedin.com/in/rerel-oluwa-tooki-cnvp-b53396253/",
     },
   ]);
+
+  const [displayTextArea, setDisplayTextArea] = useState<boolean>(false);
+  const [feedbackMessage, setFeedbackMessage] = useState<string>("");
+
+  // Function to send feedback email
+  const sendFeedbackEmail = (e: any) => {
+    e.preventDefault();
+    if (feedbackMessage.trim() !== "") {
+      emailjs
+        .send(
+          "service_u4hp1mr",
+          "template_8hjpcrt",
+          {
+            from_name: "User",
+            to_name: "Your Name",
+            message: feedbackMessage,
+          },
+          "x5ittGCaJN71qzFuY"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            // Show alert that feedback has been sent
+            alert("Feedback sent!");
+            // Hide the input field
+            setDisplayTextArea(false);
+            // Reset feedback message
+            setFeedbackMessage("");
+          },
+          (error) => {
+            console.log(error.text);
+            // Show alert for error
+            alert("Error sending feedback. Please try again later.");
+          }
+        );
+    } else {
+      // Show alert if feedback message is blank
+      alert("Insufficient character length!");
+    }
+  };
+
+  // Function to toggle display of input field
+  const toggleDisplay = () => {
+    setDisplayTextArea(!displayTextArea);
+    setFeedbackMessage(""); // Reset feedback message
+  };
 
   const inputRef = useRef<HTMLInputElement | null>(null);
 
@@ -1256,7 +1498,7 @@ const TMCCard = () => {
       if (currentIndex !== 0) {
         setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
       } else {
-        setCurrentIndex((prevIndex) => (prevIndex = 129));
+        setCurrentIndex((prevIndex) => (prevIndex = 150));
       }
     }
   };
@@ -1297,7 +1539,7 @@ const TMCCard = () => {
 
   // Function to handle the list button click. It also acts as a clear search button
   const handleListButtonClick = (id: number) => {
-    setCurrentIndex(id - 1);
+    setCurrentIndex(id);
     setIsVisible2(false);
   };
 
@@ -1367,18 +1609,41 @@ const TMCCard = () => {
     }
   };
 
+  /* New Additions */
+  const [isOpen, setIsOpen] = useState(true);
+
+  useEffect(() => {
+    setIsOpen(true);
+  }, []);
+  const [enabled, setEnabled] = useState(false);
+
   return (
     <>
-      {/* <div>
-        <h1>Current Item: {items[currentIndex].quote}</h1>
-        <button onClick={handleButtonClick}>Next Item</button>
-      </div> */}
-
       <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen">
+        <AlertModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
         <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] select-none mb-[2.5vw] flex flex-row w-[85vw] md:w-[75vw] lg:w-[80vw]">
-          <div className="flex flex-row ml-[36%] md:ml-[39%] lg:ml-[43%] w-[100%] justify-between">
+          <div className="flex flex-row sml-[36%] md:sml-[39%] lg:sml-[43%] w-[100%] justify-between sborder-2 items-center">
+            {/* Toggle Switch */}
+            <div className="invisible lg:visible text-[16px] xl">
+              <Switch
+                checked={enabled}
+                onChange={setEnabled}
+                className={`group relative flex w-14 h-8 xl:w-16 xl:h-8 cursor-pointer rounded-full bg-white/10 p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-white/10 ${
+                  enabled ? "shadow-[0_0_8px_2px_rgba(255,254,237,0.5)]" : ""
+                }`}
+              >
+                <p className="absolute text-white mix-blend-difference">Quiz</p>
+
+                <span
+                  aria-hidden="true"
+                  className={`pointer-events-none inline-block size-5 translate-x-0 rounded-full transition duration-200 ease-in-out group-data-[checked]:translate-x-6 h-6 w-6 xl:w-8  ${
+                    enabled ? "bg-white/80" : "bg-white/40"
+                  }`}
+                />
+              </Switch>
+            </div>
             <div
-              className="underline underline-offset-4"
+              className="underline underline-offset-4 tracking-[1vw] md:tracking-[0.7vw] lg:tracking-[0.5vw] sborder-2 flex flex-col justify-center"
               data-aos="zoom-out"
               data-aos-duration="500"
             >
@@ -1418,7 +1683,7 @@ const TMCCard = () => {
                             : optionsBoxText + "s"}
                         </div>
                         <FaChevronDown
-                          className="-msr-1  text-gray-400 bosrder-2"
+                          className="-msr-1  text-gray-400"
                           aria-hidden="true"
                         />
                       </button>
@@ -1426,11 +1691,11 @@ const TMCCard = () => {
                   </div>{" "}
                   {optionsListIsVisible && (
                     <div
-                      className="absolute right-0 z-10 mt-2.5 md:mt-[2.1vw] lg:mt-[1.8vw] min-w-[25vw] lg:min-w-[20vw] xl:min-w-[15vw] rounded-lg bg-white leading-snug nxl:leading-tight text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[26px] text-dark-grayish-blues z-30 shadow-2xl border-2 "
+                      className="absolute right-0 mt-2.5 md:mt-[2.1vw] lg:mt-[1.8vw] min-w-[25vw] lg:min-w-[20vw] xl:min-w-[15vw] rounded-lg bg-white leading-snug nxl:leading-tight text-[5.5vw] md:text-[17px] lg:text-[21px] nxl:text-[24px] xl:text-[26px] text-[#5e5d64] z-30 shadow-2xl border-2 "
                       data-aos="zoom-in"
                       data-aos-duration="700"
                     >
-                      <div className="border-t2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                      <div className="border-t2 hover:text-mid-blue hover:bg-light-brown hover:rounded-md border-light-cyans">
                         <button
                           onClick={handleAllButtonClick}
                           className=" w-full"
@@ -1438,7 +1703,7 @@ const TMCCard = () => {
                           All
                         </button>
                       </div>
-                      <div className="border-t-2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                      <div className="border-t-2 hover:text-mid-blue hover:bg-light-brown hover:rounded-md border-light-cyans">
                         <button
                           onClick={handleBooksButtonClick}
                           className="w-full"
@@ -1446,7 +1711,7 @@ const TMCCard = () => {
                           Books
                         </button>
                       </div>
-                      <div className="border-t-2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans">
+                      <div className="border-t-2 hover:text-mid-blue hover:bg-light-brown hover:rounded-md border-light-cyans">
                         <button
                           onClick={handleQuotesButtonClick}
                           className=" w-full "
@@ -1454,7 +1719,7 @@ const TMCCard = () => {
                           Quotes
                         </button>
                       </div>
-                      <div className="border-t-2 hover:text-neon-greens hover:bg-dark-grayish-blues hover:rounded-md border-light-cyans text-[4.8vw] md:text-[17px] lg:text-[19px] nxl:text-[24px] xl:text-[26px]">
+                      <div className="border-t-2 hover:text-mid-blue hover:bg-light-brown hover:rounded-md border-light-cyans text-[4.8vw] md:text-[17px] lg:text-[19px] nxl:text-[24px] xl:text-[26px]">
                         <button
                           onClick={handleScripturesButtonClick}
                           className="w-full "
@@ -1466,7 +1731,6 @@ const TMCCard = () => {
                   )}
                 </div>
               )}
-
               <div className="" data-aos="zoom-out" data-aos-duration="500">
                 <button className="h-[100%]" onClick={handleSearchButtonClick}>
                   <IoMdSearch
@@ -1483,6 +1747,26 @@ const TMCCard = () => {
                   />
                 </button>
               </div>
+              <div className="absolute top-4 right-6 lg:hidden text-[15px]">
+                <Switch
+                  checked={enabled}
+                  onChange={setEnabled}
+                  className={`group relative flex w-12 h-6 cursor-pointer rounded-full bg-white/10 p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-white/10 ${
+                    enabled ? "shadow-[0_0_8px_2px_rgba(255,254,237,0.5)]" : ""
+                  }`}
+                >
+                  <p className="absolute translate-y-[-4px] text-white mix-blend-difference">
+                    Quiz
+                  </p>
+
+                  <span
+                    aria-hidden="true"
+                    className={`pointer-events-none inline-block size-5 translate-x-0 rounded-full transition duration-200 ease-in-out group-data-[checked]:translate-x-6 h-4 w-4 ${
+                      enabled ? "bg-white/80" : "bg-white/40"
+                    }`}
+                  />
+                </Switch>
+              </div>
             </div>
           </div>
         </div>
@@ -1495,9 +1779,13 @@ const TMCCard = () => {
             <div className="flex flex-row gap-[3vw] md:gap-[2.1vw] lg:gap-[1.5vw]">
               <div className="border-t-[0.2vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] w-[21.5vw] md:w-[20.5vw] lg:w-[26.7vw] border-light-cyans"></div>
               <div>
+                {/* Change this part to display the category */}
                 {optionsBoxText === "ALL" || optionsBoxText === "Option"
-                  ? "ADVICE"
+                  ? items[currentIndex].category.toUpperCase()
                   : optionsBoxText.toUpperCase()}
+                {/* {optionsBoxText === "ALL" || optionsBoxText === "Option"
+                  ? "ADVICE"
+                  : optionsBoxText.toUpperCase()} */}
               </div>
               <div className="text-neon-greens underline underline-offset-4 tracking-wider decoration-light-cyans/70">
                 #{items[currentIndex].id}
@@ -1549,11 +1837,15 @@ const TMCCard = () => {
             data-aos-duration="500"
           >
             <div className="border-t-[0.2vw] relative top-[2.5vw] md:top-[1.75vw] lg:top-[1.25vw] md:border-t-[0.14vw] lg:border-t-[0.1vw] w-[10vw] md:w-[7vw] lg:w-[5vw] border-neon-greens mr-[1.5vw] md:mr-[1vw]"></div>
-            <div className="text-light-cyans text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] underline underline-offset-4 tracking-wider decoration-neon-greens/70">
+            {/* Conditionally Blurred Author Name */}
+            <div
+              className={`text-light-cyans text-[3.5vw] md:text-[2.45vw] lg:text-[1.75vw] underline underline-offset-4 tracking-wider decoration-mid-blue/70 ${
+                enabled ? "blur-md" : ""
+              }`}
+            >
               <a
                 href={items[currentIndex].url}
                 target="_blank"
-                className=""
                 title={items[currentIndex].author}
               >
                 {items[currentIndex].author}
@@ -1583,13 +1875,42 @@ const TMCCard = () => {
         <div className="fixed bottom-0 left-0 ml-[2vw] pb-[1.2vw] text-light-cyans underline-offset-2 nxl:underline-offset-4 md:pb-[1.2vw] text-[2vw] nsm:text-[1.2vw] xl:text-[1vw] select-none">
           © 2023{" "}
           <a
-            href="https://linkedin.com/in/rerel-oluwa-tooki-b53396253/"
+            href="https://www.linkedin.com/in/rerel-oluwa-tooki-cnvp-b53396253/"
             target="_blank"
             className="underline text-neon-greens tracking-wide"
             title="About Rerel'Oluwa Tooki"
           >
             Rerel'Oluwa Tooki
           </a>
+        </div>
+        <div className="fixed bottom-0 right-0 mr-[2vw] pb-[1.2vw] text-light-cyans md:underline-offset-2 nxl:underline-offset-4 md:pb-[1.2vw] text-[2vw] nsm:text-[1.2vw] xl:text-[1vw] select-none">
+          {displayTextArea && (
+            <div className="flex flex-col md:flex-row gap-[10px] md:gap-auto">
+              <textarea
+                placeholder="Feedback? Suggestions?"
+                className="overflow-y-auto border border-gray-400 px-2 pt-[4px] w-[40vw] max-w-[330px] h-auto max-h-[25px] rounded-md text-black text-[10px]"
+                value={feedbackMessage}
+                name="message"
+                onChange={(e) => setFeedbackMessage(e.target.value)}
+              />
+              <div className="self-end md:self-auto">
+                <button
+                  onClick={sendFeedbackEmail}
+                  className="ml-2 px-4 py-[2px] bg-light-brown text-light-cyans h-full max-h-[25px] text-white rounded-sm md:rounded-md"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          )}
+          {!displayTextArea && (
+            <div onClick={toggleDisplay} className="cursor-pointer">
+              <MdOutlineQuestionAnswer
+                fill="rgb(255, 254, 237)"
+                className="w-[6vw] h-[6vw] max-w-[25px] max-h-[25px]"
+              />
+            </div>
+          )}
         </div>
       </div>
     </>
