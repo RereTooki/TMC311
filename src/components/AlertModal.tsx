@@ -42,11 +42,12 @@ const AlertModal: React.FC<AlertModalProps> = ({ isOpen, onClose }) => {
                     Here, you'll find every scripture, book and quote taught so
                     far this semester. <br></br>
                     <br></br> Please note that the notes for the 24/25 session
-                    as uploaded on the moodle page stop at id 103. Anything
-                    below that is what was taught last session (23/24).
+                    as uploaded on the moodle page stop at id 93. Anything below
+                    that is what was taught last session (23/24).
                     <br></br>
                     <br></br>
-                    Also, there's now a quiz feature.<br></br>P.S. Check this
+                    Also, there's now a quiz feature.<br></br>
+                    <br></br>P.S. READ YOUR NOTES TOO<br></br>P.S. Check this
                     out:{" "}
                     <a
                       href="https://rere-tooki.vercel.app/"
