@@ -1375,7 +1375,7 @@ const TMCCard = () => {
       if (currentIndex !== 0) {
         setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
       } else {
-        setCurrentIndex((prevIndex) => (prevIndex = 136));
+        setCurrentIndex((prevIndex) => (prevIndex = 135));
       }
     }
   };
@@ -1514,6 +1514,8 @@ const TMCCard = () => {
                 className={`group relative flex w-14 h-8 xl:w-16 xl:h-8 cursor-pointer rounded-full bg-white/10 p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-white/10 ${
                   enabled ? "shadow-[0_0_8px_2px_rgba(255,254,237,0.5)]" : ""
                 }`}
+                data-aos="zoom-out"
+                data-aos-duration="500"
               >
                 <p className="absolute text-white mix-blend-difference">Quiz</p>
 
