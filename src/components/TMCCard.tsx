@@ -1375,7 +1375,7 @@ const TMCCard = () => {
       if (currentIndex !== 0) {
         setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
       } else {
-        setCurrentIndex((prevIndex) => (prevIndex = 135));
+        setCurrentIndex((prevIndex) => (prevIndex = 130));
       }
     }
   };
