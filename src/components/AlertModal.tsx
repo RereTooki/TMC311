@@ -1,6 +1,6 @@
 import React from "react";
 import { Dialog } from "@headlessui/react";
-import { useState } from "react";
+// import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
 interface AlertModalProps {
@@ -10,9 +10,9 @@ interface AlertModalProps {
 
 const AlertModal: React.FC<AlertModalProps> = ({ isOpen, onClose }) => {
   // Function to handle the click event and scroll to the top
-  const handleItemClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // const handleItemClick = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
   return (
     <>
       <Dialog
@@ -36,29 +36,24 @@ const AlertModal: React.FC<AlertModalProps> = ({ isOpen, onClose }) => {
                 <span className="underline underline-offset-4">TMC 311</span>{" "}
               </Dialog.Title>
               <p className="mt-8 text-sm/6 text-gray-500 hover:text-gray-700 shadow rounded-lg p-4">
-                <div className="containers mx-auto sborder-4 border-black max-h-[40vh] soverflow-y-scroll scroll scrollModal overflow-y-scroll">
+                <div className="containers mx-auto sborder-4 border-black max-h-[40vh] soverflow-y-scroll scroll scrollModal overflow-y-scroll pr-2">
                   <p>
                     Hello and welcome to the TMC 311 hub! <br></br> <br></br>{" "}
                     Here, you'll find every scripture, book and quote taught so
-                    far this semester. <br></br>
-                    <br></br> Please note that the notes for the 24/25 session
-                    as uploaded on the moodle page stop at id 93. Anything below
-                    that is what was taught last session (23/24).
+                    far this semester. Also, there's now a quiz feature.
                     <br></br>
-                    <br></br>
-                    Also, there's now a quiz feature.<br></br>
                     <br></br>P.S. READ YOUR NOTES TOO<br></br>P.S. Check this
                     out:{" "}
                     <a
                       href="https://rere-tooki.vercel.app/"
                       target="_blank"
                       title="Rere Tooki"
-                      className="underline underline-offset-2 hover:underline-offset-4"
+                      className="underline underline-offset-2 hover:underline-offset-4 hover:scale-[1.08] transition ease-in-out duration-500 delay-10 "
                     >
                       My Portfolio Site
                     </a>
                     <br></br>
-                    <br></br>Thank you!🫶🏾<br></br>~ rere
+                    <br></br>Thank you!<br></br>~ rere
                   </p>
                 </div>
               </p>
