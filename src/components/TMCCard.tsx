@@ -76,6 +76,8 @@ const TMCCard = () => {
       category: "Bible",
       url: "https://www.bible.com/bible/1849/1JN.2.17.TPT",
     },
+    /* end of note */
+    /* beginning of note */
     {
       id: 6,
       name: "Item 6",
@@ -517,6 +519,8 @@ const TMCCard = () => {
       category: "Book",
       url: "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/79/2486852/1.jpg?0284",
     },
+    /* end of note */
+    /* beginning of note */
     {
       id: 56,
       name: "Item 56",
@@ -535,6 +539,7 @@ const TMCCard = () => {
       category: "Quote",
       url: "https://www.google.com/search?q=Citizenship+is+a+collection+of+rights+and+obligations+which+gives+an+individual+a+formal+legal+identity+Turner,+2004&source=lmns&bih=610&biw=1280&hl=en-US&sa=X&ved=2ahUKEwiUodTHzNqCAxWNlycCHVRBCeMQ_AUoAHoECAEQAA",
     },
+
     {
       id: 58,
       name: "Item 58",
@@ -603,9 +608,9 @@ const TMCCard = () => {
       name: "Item 65",
       quote:
         "Let no man despise thy youth; but be thou an example of the believers, in word, in conversation, in charity, in spirit, in faith, in purity.",
-      author: "1 Timothy 4:12",
+      author: "1 Timothy 4:12-15",
       category: "Bible",
-      url: "https://www.biblegateway.com/passage/?search=1+Timothy+4%3A12&version=KJV",
+      url: "https://www.bible.com/bible/1/1ti.4.12-15",
     },
     {
       id: 66,
@@ -714,6 +719,8 @@ const TMCCard = () => {
       category: "Quote",
       url: "https://www.google.com/search?q=Bishop+David+Oyedepo&oq=Bish&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7MgYIARBFGDkyBwgCEAAYjwIyBwgDEAAYjwIyBwgEEAAYjwLSAQc4MDJqMGo5qAIAsAIB&sourceid=chrome&ie=UTF-8",
     },
+    /* end of notes */
+    /* beginning of notes */
     {
       id: 78,
       name: "Item 78",
@@ -842,103 +849,91 @@ const TMCCard = () => {
       category: "Bible",
       url: "https://www.bible.com/bible/1/hab.2.14",
     },
+    /* end of note */
+
+    /*insert new start*/
     {
       id: 93,
       name: "Item 93",
-      quote:
-        "“This is where the notes for the 24/25 session stop on moodle. From here down is 23/24 notes. Feel free to go on.”",
-      author: "Rerel'Oluwa Tooki",
+      quote: "It takes responsibility to live a life of dignity",
+      author: "Bishop David Oyedepo",
       category: "Quote",
-      url: "https://www.linkedin.com/in/rerel-oluwa-tooki-cnvp-b53396253/",
+      url: "https://www.google.com/search?q=Bishop+David+Oyedepo&oq=Bis&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg5MgYIARBFGDsyBwgCEAAYjwIyBwgDEAAYjwIyBwgEEAAYjwLSAQgxMzk3ajBqMagCALACAA&sourceid=chrome&ie=UTF-8",
     },
-
     {
       id: 94,
       name: "Item 94",
       quote:
-        "“When we listen and celebrate what is both common and different, we become wiser, more inclusive, and better as an organization.”",
-      author: "Pat Wadors",
+        "The line between good and evil is permeable and almost everyone can be induced to cross it when pressured by situational forces",
+      author: "Philip Zimbardo",
       category: "Quote",
-      url: "https://www.google.com/search?q=%E2%80%9CWhen+we+listen+and+celebrate+what+is+both+common+and+different%2C+we+become+wiser%2C+more+inclusive%2C+and+better+as+an+organization.%E2%80%9D+%E2%80%94+Pat+Wadors.&oq=%E2%80%9CWhen+we+listen+and+celebrate+what+is+both+common+and+different%2C+we+become+wiser%2C+more+inclusive%2C+and+better+as+an+organization.%E2%80%9D+%E2%80%94+Pat+Wadors.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzI5M2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+      url: "https://www.google.com/search?q=Philip+Zimbardo&oq=Philip+Zimbardo&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiPAtIBBzI0NGowajGoAgCwAgA&sourceid=chrome&ie=UTF-8",
     },
     {
       id: 95,
       name: "Item 95",
-      quote: "“Diversity doesn't look like anyone. It looks like everyone.”",
-      author: "Karen Draper",
-      category: "Quote",
-      url: "https://www.goodreads.com/quotes/10067110-diversity-doesn-t-look-like-anyone-it-looks-like-everyone",
+      quote:
+        "And be not conformed to this world: but be ye transformed by the renewing of your mind, that ye may prove what is that good, and acceptable, and perfect, will of God.",
+      author: "Romans 12:2 (KJV)",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A2&version=KJV",
     },
     {
       id: 96,
       name: "Item 96",
       quote:
-        "Global Citizenship Education: Topics and Learning Objectives. United Nations Educational, Scientific and Cultural Organization, Paris.",
-      author: "By: UNESCO (2015)",
-      category: "Book",
-      url: "https://www.google.com/search?q=UNESCO+(2015).+Global+Citizenship+Education%3A+Topics+and+Learning+Objectives.+United+Nations+Educational%2C+Scientific+and+Cultural+Organization%2C+Paris.&oq=UNESCO+(2015).+Global+Citizenship+Education%3A+Topics+and+Learning+Objectives.+United+Nations+Educational%2C+Scientific+and+Cultural+Organization%2C+Paris.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzI0M2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+        "Don't copy the behaviour and customs of this world, but let God transform you into a new person by changing the way you think. Then you will learn to.",
+      author: "Romans 12:2 (NLT)",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A2&version=NLT",
     },
     {
       id: 97,
       name: "Item 97",
       quote:
-        "Global Citizenship. Whitepaper about an emerging concept. Willington: MF.",
-      author: "By: The Melton Foundation (2021)",
-      category: "Book",
-      url: "https://www.google.com/search?q=The+Melton+Foundation+(2021).+Global+Citizenship.+Whitepaper+about+an+emerging+concept.+Willington%3A+MF.&oq=The+Melton+Foundation+(2021).+Global+Citizenship.+Whitepaper+about+an+emerging+concept.+Willington%3A+MF.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzIyMWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+        "Jesus answered and said to him, 'If anyone loves Me, he will keep My word; and My Father will love him, and We will come to him and make Our home with him.'",
+      author: "John 14:23",
+      category: "Bible",
+      url: "https://www.biblegateway.com/passage/?search=John+14%3A23&version=KJV",
     },
     {
       id: 98,
       name: "Item 98",
-      quote: "Global Citizenship in the Classroom. Oxfam, Oxford.",
-      author: "By: Oxfam (2015)",
-      category: "Book",
-      url: "https://www.google.com/search?q=Oxfam+(2015).+Global+Citizenship+in+the+Classroom.+Oxfam%2C+Oxford.&oq=Oxfam+(2015).+Global+Citizenship+in+the+Classroom.+Oxfam%2C+Oxford.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzIyOGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+      quote:
+        "Society's going in such a way that, if you don't conform, you feel like an alien. many guys will go out on a Friday and Saturday night because of peer pressure. It takes a man to stand up and say I don't feel like going out, and for a long time, I wasn't at that place. I'm thankful that Inga showed me I didn't have to go with the flow. At the end of the day, it's the dead fish that go with the flow.",
+      author: "Jason Robinson",
+      category: "Quote",
+      url: "https://www.google.com/search?q=Jason+Robinson&oq=Jason+Robinson&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzU2NWowajGoAgCwAgA&sourceid=chrome&ie=UTF-8",
     },
     {
       id: 99,
       name: "Item 99",
       quote:
-        "“Education is the most powerful weapon you can use to change the world.”",
-      author: "Nelson Mandela",
+        "It's better to walk alone than with a crowd going in the wrong direction. Do what you feel is right.",
+      author: "Experience",
       category: "Quote",
-      url: "https://www.google.com/search?q=%E2%80%9CEducation+is+the+most+powerful+weapon+you+can+use+to+change+the+world.%E2%80%9D+Nelson+Mandela&oq=%E2%80%9CEducation+is+the+most+powerful+weapon+you+can+use+to+change+the+world.%E2%80%9D+Nelson+Mandela&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzMxNGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#ip=1",
+      url: "https://www.google.com/search?q=%22It%27s+better+to+walk+alone+than+with+a+crowd+going+in+the+wrong+direction.+Do+what+you+feel+is+right.&oq=%22It%27s+better+to+walk+alone+than+with+a+crowd+going+in+the+wrong+direction.+Do+what+you+feel+is+right.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBBzgxN2owajGoAgCwAgA&sourceid=chrome&ie=UTF-8",
     },
     {
       id: 100,
       name: "Item 100",
       quote:
-        "“Before you finish eating breakfast this morning, you’ve depended on more than half the world”",
-      author: "Martin Luther King",
+        "Be careful of those who work so hard to turn you into a victim of the societal pressure they have fallen victims of",
+      author: "Unknown",
       category: "Quote",
-      url: "https://www.goodreads.com/quotes/10684635-did-you-ever-stop-to-think-that-you-can-t-leave",
+      url: "",
     },
     {
       id: 101,
       name: "Item 101",
-      quote: "“No one will be remembered by what he has but what he adds.”",
-      author: "Bishop David O. Oyedepo",
-      category: "Quote",
-      url: "https://www.google.com/search?q=Bishop+David+Oyedepo&oq=Bishop+David+Oyedepo&gs_lcrp=EgZjaHJvbWUqDwgAEEUYOxjjAhixAxiABDIPCAAQRRg7GOMCGLEDGIAEMgoIARAuGLEDGIAEMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgYIBxBFGD3SAQg0NjI4ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8",
-    },
-    {
-      id: 102,
-      name: "Item 102",
       quote:
-        "“There is enough in the world for everyone’s need, but not for everyone’s greed.”",
-      author: "Mohandas Gandhi",
+        "Don't change so people will like you. Be yourself and the right people will love the real you.",
+      author: "Unknown",
       category: "Quote",
-      url: "https://www.goodreads.com/quotes/427443-the-world-has-enough-for-everyone-s-need-but-not-enough",
+      url: "",
     },
-    {
-      id: 103,
-      name: "Item 103",
-      quote:
-        "“And in the end, it’s not the years in your life that counts; it’s the life in your years.”",
-      author: "Abraham Lincoln",
-      category: "Quote",
-      url: "https://www.goodreads.com/quotes/5851097-and-in-the-end-it-s-not-the-years-in-your",
-    },
+    /*insert new stop*/
+    /* beginning of note */
     {
       id: 104,
       name: "Item 104",
@@ -1109,6 +1104,8 @@ const TMCCard = () => {
       category: "Bible",
       url: "https://www.bible.com/bible/1/Jer.29.11",
     },
+    /* end of note */
+    /* beginning of note */
     {
       id: 124,
       name: "Item 124",
@@ -1160,7 +1157,18 @@ const TMCCard = () => {
       category: "Book",
       url: "https://www.google.com/search?q=Packer%2C+D.+(2016)+%E2%80%9CConscious+Politics%E2%80%9D.+A+TEDTalk+Recording.&oq=Packer%2C+D.+(2016)+%E2%80%9CConscious+Politics%E2%80%9D.+A+TEDTalk+Recording.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDEzMjhqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8",
     },
-
+    /* end of note */
+    /* Demarcation */
+    {
+      id: 93,
+      name: "Item 93",
+      quote:
+        "“This is where the notes for the 24/25 session stop on moodle. From here down is 23/24 notes. Feel free to go on.”",
+      author: "Rerel'Oluwa Tooki",
+      category: "Quote",
+      url: "https://www.linkedin.com/in/rerel-oluwa-tooki-cnvp-b53396253/",
+    },
+    /* Demarcation */
     {
       id: 130,
       name: "Item 130",
@@ -1231,6 +1239,7 @@ const TMCCard = () => {
       category: "Bible",
       url: "https://www.bible.com/bible/1/PSA.122.6.KJV",
     },
+    /* beginning of note */
     {
       id: 138,
       name: "Item 138",
@@ -1283,7 +1292,7 @@ const TMCCard = () => {
       category: "Bible",
       url: "https://www.bible.com/bible/1/mat.5.9",
     },
-
+    /* end of note */
     {
       id: 144,
       name: "Item 144",
@@ -1627,7 +1636,7 @@ const TMCCard = () => {
   return (
     <>
       <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen">
-        <AlertModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
+        <AlertModal isOpen={!isOpen} onClose={() => setIsOpen(false)} />
         <AlertModal2 isOpen2={isOpen2} onClose={() => setIsOpen2(false)} />
         <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-normal select-none mb-[2.5vw] flex flex-row w-[85vw] md:w-[75vw] lg:w-[80vw]">
           <div className="sborder-2 flex flex-row sml-[36%] md:sml-[39%] lg:sml-[43%] w-[100%] justify-between items-center">
