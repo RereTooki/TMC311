@@ -1158,116 +1158,18 @@ const TMCCard = () => {
       url: "https://www.google.com/search?q=Packer%2C+D.+(2016)+%E2%80%9CConscious+Politics%E2%80%9D.+A+TEDTalk+Recording.&oq=Packer%2C+D.+(2016)+%E2%80%9CConscious+Politics%E2%80%9D.+A+TEDTalk+Recording.&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDEzMjhqMGo5qAIAsAIA&sourceid=chrome&ie=UTF-8",
     },
     /* end of note */
-    /* Demarcation */
-    {
-      id: 93,
-      name: "Item 93",
-      quote:
-        "“This is where the notes for the 24/25 session stop on moodle. From here down is 23/24 notes. Feel free to go on.”",
-      author: "Rerel'Oluwa Tooki",
-      category: "Quote",
-      url: "https://www.linkedin.com/in/rerel-oluwa-tooki-cnvp-b53396253/",
-    },
-    /* Demarcation */
+    /* Beginning of Note */
     {
       id: 130,
       name: "Item 130",
-      quote: "“A glorious result demands a serious approach”",
-      author: "Bishop David Oyedepo",
-      category: "Quote",
-      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
-    },
-    {
-      id: 131,
-      name: "Item 131",
-      quote:
-        "“God has a place prepared for you in life. A discovery of it is what is called vision.”",
-      author: "Bishop David Oyedepo",
-      category: "Quote",
-      url: "https://www.google.com/search?q=bishop+david+oyedepo&oq=bi&gs_lcrp=EgZjaHJvbWUqBggCEEUYOzIGCAAQRRg8MgYIARBFGDkyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFEEUYPDIGCAYQRRg9MgYIBxBFGDzSAQgxODc0ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
-    },
-    {
-      id: 132,
-      name: "Item 132",
-      quote: "“Diversity in all its forms is the path to greatness.”",
-      author: "James D. Wilson",
-      category: "Quote",
-      url: "https://www.goodreads.com/quotes/10095779-diversity-in-all-its-forms-is-the-path-to-greatness",
-    },
-    {
-      id: 133,
-      name: "Item 133",
-      quote: "“Strength lies in differences, not in similarities.”",
-      author: "Stephen R. Covey",
-      category: "Quote",
-      url: "https://www.goodreads.com/quotes/68074-strength-lies-in-differences-not-in-similarities",
-    },
-
-    {
-      id: 134,
-      name: "Item 134",
-      quote:
-        "Everyone must submit to governing authorities. For all authority comes from God, and those in positions of authority have been placed there by God.",
-      author: "Romans 13:1",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/ROM.13.1.KJV",
-    },
-    {
-      id: 135,
-      name: "Item 135",
-      quote:
-        "So you must submit to them, not only to avoid punishment, but also to keep a clear conscience. ",
-      author: "Romans 13:5",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.5",
-    },
-
-    {
-      id: 136,
-      name: "Item 136",
-      quote:
-        "“No one lights a lamp and then puts it under a basket. Instead, a lamp is placed on a stand, where it gives light to everyone in the house. E.g. Volunteer for community service, help the needy & the poor. In the same way, let your good deeds shine out for all to see, so that everyone will praise your heavenly Father”",
-      author: "Matthew 5:15-16",
-      category: "Bible",
-      url: "https://www.biblegateway.com/passage/?search=Matthew%205%3A15-16&version=NIV",
-    },
-    {
-      id: 137,
-      name: "Item 137",
-      quote: "Pray for peace in Jerusalem. May all who love this city prosper.",
-      author: "Psalm 122:6",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/PSA.122.6.KJV",
-    },
-    /* beginning of note */
-    {
-      id: 138,
-      name: "Item 138",
-      quote:
-        "For just as each of us has one body with many members, and these members do not all have the same function, so in Christ we, though many, form one body, and each member belongs to all the others.",
-      author: "Romans 12:4–5",
-      category: "Bible",
-      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A4%E2%80%935&version=NIV",
-    },
-    {
-      id: 139,
-      name: "Item 139",
-      quote: "Click the link",
-      author: "Ecclesiastes 4:9-12 NIV",
-      category: "Bible",
-      url: "https://www.biblegateway.com/passage/?search=Ecclesiastes+4%3A9-12+&version=NIV",
-    },
-    {
-      id: 140,
-      name: "Item 140",
       quote: "Can two walk together except they agree?’",
       author: "Amos 3:3",
       category: "Bible",
       url: "https://www.bible.com/bible/1/amo.3.3",
     },
     {
-      id: 141,
-      name: "Item 141",
+      id: 131,
+      name: "Item 131",
       quote:
         "“I've learned that people will forget what you said, people will forget what you did, but people will never forget how you made them feel.”",
       author: "Maya Angelou",
@@ -1275,8 +1177,8 @@ const TMCCard = () => {
       url: "https://www.goodreads.com/quotes/5934-i-ve-learned-that-people-will-forget-what-you-said-people",
     },
     {
-      id: 142,
-      name: "Item 142",
+      id: 132,
+      name: "Item 132",
       quote:
         "Leave there thy gift before the altar, and go thy way; first be reconciled to thy brother, and then come and offer thy gift.",
       author: "Matthew 5:24",
@@ -1284,72 +1186,36 @@ const TMCCard = () => {
       url: "https://www.bible.com/bible/1/mat.5.24",
     },
     {
-      id: 143,
-      name: "Item 143",
+      id: 133,
+      name: "Item 133",
       quote:
         "Blessed are the peacemakers: for they shall be called the children of God.",
       author: "Matthew 5:9",
       category: "Bible",
       url: "https://www.bible.com/bible/1/mat.5.9",
     },
-    /* end of note */
     {
-      id: 144,
-      name: "Item 144",
+      id: 134,
+      name: "Item 134",
       quote:
-        "Pay your taxes, too, for these same reasons. For government workers need to be paid. They are serving God in what they do",
-      author: "Romans 13:6",
+        "For just as each of us has one body with many members, and these members do not all have the same function, so in Christ we, though many, form one body, and each member belongs to all the others.",
+      author: "Romans 12:4–5",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.6",
+      url: "https://www.biblegateway.com/passage/?search=Romans+12%3A4%E2%80%935&version=NIV",
     },
     {
-      id: 145,
-      name: "Item 145",
-      quote:
-        "“Owe nothing to anyone—except for your obligation to love one another. If you love your neighbor, you will fulfill the requirements of God’s law”",
-      author: "Romans 13:8",
+      id: 135,
+      name: "Item 135",
+      quote: "Click the link",
+      author: "Ecclesiastes 4:9-12 NIV",
       category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.8",
+      url: "https://www.biblegateway.com/passage/?search=Ecclesiastes+4%3A9-12+&version=NIV",
     },
+    /*end of note*/
+
     {
-      id: 146,
-      name: "Item 146",
-      quote:
-        "“Love does no wrong to others, so love fulfills the requirements of God’s law”",
-      author: "Romans 13:10",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.10",
-    },
-    {
-      id: 147,
-      name: "Item 147",
-      quote:
-        "Because we belong to the day, we must live decent lives for all to see. Don’t participate in the darkness of wild parties and drunkenness, or in sexual promiscuity and immoral living, or in quarreling and jealousy.",
-      author: "Romans 13:13",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/rom.13.13",
-    },
-    {
-      id: 148,
-      name: "Item 148",
-      quote:
-        "Always be humble and gentle. Be patient with each other, making allowance for each other’s faults because of your love. Make every effort to keep yourselves united in the Spirit, binding yourselves together with peace",
-      author: "Ephesians 4:2-3",
-      category: "Bible",
-      url: "https://www.bible.com/bible/111/EPH.4.2-3.NIV",
-    },
-    {
-      id: 149,
-      name: "Item 149",
-      quote:
-        "Wherefore, my beloved, as ye have always obeyed, not as in my presence only, but now much more in my absence, work out your own salvation with fear and trembling.",
-      author: "Philippians 2:12 (KJV)",
-      category: "Bible",
-      url: "https://www.bible.com/bible/1/php.2.12",
-    },
-    {
-      id: 150,
-      name: "Item 150",
+      id: 136,
+      name: "Item 136",
       quote: "Thank You!",
       author: "Rerel'Oluwa Tooki",
       category: "Quote",
@@ -1509,7 +1375,7 @@ const TMCCard = () => {
       if (currentIndex !== 0) {
         setCurrentIndex((prevIndex) => (prevIndex - 1) % items.length);
       } else {
-        setCurrentIndex((prevIndex) => (prevIndex = 150));
+        setCurrentIndex((prevIndex) => (prevIndex = 136));
       }
     }
   };
@@ -1636,7 +1502,7 @@ const TMCCard = () => {
   return (
     <>
       <div className="bg-dark-blues flex flex-col items-center justify-center min-h-screen">
-        <AlertModal isOpen={!isOpen} onClose={() => setIsOpen(false)} />
+        <AlertModal isOpen={isOpen} onClose={() => setIsOpen(false)} />
         <AlertModal2 isOpen2={isOpen2} onClose={() => setIsOpen2(false)} />
         <div className="whitespace-nowrap text-[4.5vw] md:text-[3.15vw] lg:text-[2.25vw] text-light-cyans tracking-normal select-none mb-[2.5vw] flex flex-row w-[85vw] md:w-[75vw] lg:w-[80vw]">
           <div className="sborder-2 flex flex-row sml-[36%] md:sml-[39%] lg:sml-[43%] w-[100%] justify-between items-center">
