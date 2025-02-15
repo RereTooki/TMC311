@@ -1509,7 +1509,7 @@ const TMCCard = () => {
             {/* Toggle Switch */}
             <div
               className="invisible lg:visible text-[16px] xl"
-              data-aos="zoom-out"
+              data-aos="zoom-in"
               data-aos-duration="500"
             >
               <Switch
